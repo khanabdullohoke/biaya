@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biaya Pendidikan SMKS Ciledug Al Musaddadiyah TA 2025/2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --deep-blue: #003D8F;
+    --mid-blue: #0050B8;
+    --blue-2: #0060D6;
+    --blue-3: #1572E8;
+    --blue-glow: #3B8BFF;
+    --blue-light: #63A6FF;
+    --blue-pale: #C8DEFF;
+    --gold: #C9A84C;
+    --gold-bright: #E8C46A;
+    --gold-pale: #FFF7E0;
+    --gold-glow: rgba(201,168,76,0.18);
+    --white: #FFFFFF;
+    --off-white: #F0F6FF;
+    --text-muted: #A8C8F0;
+    --border: rgba(201,168,76,0.22);
+    --border-blue: rgba(99,166,255,0.2);
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--deep-blue);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+  /* ── NOISE TEXTURE OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.4;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 6vw;
+    background: rgba(0,61,143,0.88);
+    backdrop-filter: blur(18px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
+  .nav-logo-ring {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    background: var(--gold-glow);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--gold-bright);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+
+  .nav-name {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-name span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-bright); }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    transition: box-shadow 0.2s, transform 0.2s !important;
+  }
+
+  .nav-cta:hover {
+    box-shadow: 0 0 24px rgba(201,168,76,0.5) !important;
+    transform: translateY(-1px);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 6vw 3rem;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    width: 900px; height: 900px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(37,99,199,0.18) 0%, transparent 70%);
+    top: -200px; left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .glow-gold {
+    position: absolute;
+    width: 500px; height: 500px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.12) 0%, transparent 65%);
+    bottom: 80px; right: -100px;
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.4rem 1.1rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulse-gold 2s infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .accent {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    max-width: 600px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── SECTION COMMON ── */
+  section {
+    position: relative;
+    padding: 5rem 6vw;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
+  }
+
+  .section-kicker {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--white);
+  }
+
+  .section-desc {
+    max-width: 680px;
+    margin: 1.2rem auto 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  /* ── PRICE TABLE ── */
+  .price-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .price-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .toggle-btn {
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--border-blue);
+    background: rgba(255,255,255,0.03);
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .toggle-btn.active {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue);
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(201,168,76,0.4);
+  }
+
+  .price-table {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-blue);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+  }
+
+  .table-header {
+    display: grid;
+    grid-template-columns: 60px 1fr 140px 140px;
+    background: linear-gradient(135deg, rgba(21,114,232,0.15), rgba(0,96,214,0.1));
+    border-bottom: 1px solid var(--border-blue);
+    padding: 1.2rem 1.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 140px 140px;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(99,166,255,0.1);
+    transition: background 0.2s;
+  }
+
+  .table-row:hover {
+    background: rgba(255,255,255,0.03);
+  }
+
+  .table-row:last-child {
+    border-bottom: none;
+  }
+
+  .row-num {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .row-label {
+    font-weight: 500;
+    color: var(--white);
+    font-size: 0.95rem;
+  }
+
+  .row-price {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--blue-light);
+    text-align: right;
+  }
+
+  .table-total {
+    display: grid;
+    grid-template-columns: 60px 1fr 140px 140px;
+    padding: 1.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(232,196,106,0.08));
+    border-top: 2px solid var(--gold);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+  }
+
+  .total-label {
+    color: var(--gold-bright);
+  }
+
+  .total-price {
+    color: var(--gold-bright);
+    text-align: right;
+    font-size: 1.15rem;
+  }
+
+  /* ── INFO BOXES ── */
+  .info-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .info-box {
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    border: 1px solid var(--border-blue);
+    border-radius: 16px;
+    padding: 1.8rem;
+    backdrop-filter: blur(10px);
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .info-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  .info-highlight {
+    color: var(--gold-bright);
+    font-weight: 600;
+  }
+
+  /* ── DISCOUNT SECTION ── */
+  .discount-section {
+    background: linear-gradient(135deg, rgba(21,114,232,0.1), rgba(0,96,214,0.05));
+    border: 1px solid var(--border-blue);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .discount-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 1.5rem;
+  }
+
+  .discount-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .discount-desc {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  .discount-list {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+  }
+
+  .discount-list li {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--white);
+  }
+
+  .discount-list li::before {
+    content: '✓';
+    color: var(--gold-bright);
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    padding: 5rem 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, rgba(21,114,232,0.15), rgba(0,96,214,0.08));
+    border: 1px solid var(--border-blue);
+    border-radius: 24px;
+    padding: 3.5rem 3rem;
+    max-width: 800px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-sub {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue);
+    box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 6px 30px rgba(201,168,76,0.5);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.05);
+    color: var(--white);
+    border: 2px solid var(--border-blue);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold);
+    color: var(--gold-bright);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2.5rem 6vw;
+    background: rgba(0,50,120,0.3);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  .footer-brand span { color: var(--gold-bright); }
+
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* ── ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem 5vw;
+    }
+
+    .nav-links {
+      display: none;
+    }
+
+    .hero {
+      padding: 6rem 5vw 2rem;
+      min-height: 60vh;
+    }
+
+    section {
+      padding: 3rem 5vw;
+    }
+
+    .table-header, .table-row, .table-total {
+      grid-template-columns: 40px 1fr 100px;
+      font-size: 0.8rem;
+      padding: 1rem;
+    }
+
+    .row-price:last-child,
+    .table-header > *:last-child,
+    .total-price:last-child {
+      display: none;
+    }
+
+    .price-toggle {
+      flex-direction: column;
+    }
+
+    .toggle-btn {
+      width: 100%;
+    }
+
+    .info-boxes {
+      grid-template-columns: 1fr;
+    }
+
+    .discount-section {
+      padding: 2rem 1.5rem;
+    }
+
+    .cta-box {
+      padding: 2.5rem 2rem;
+    }
+
+    .cta-buttons {
+      flex-direction: column;
+    }
+
+    .btn-primary, .btn-secondary {
+      width: 100%;
+      justify-content: center;
+    }
+
+    footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <div class="nav-logo-ring">SC</div>
+    <div class="nav-name">
+      SMKS Ciledug<br>
+      <span>Al Musaddadiyah</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#biaya">Biaya</a></li>
+    <li><a href="#diskon">Diskon</a></li>
+    <li><a href="#beasiswa">Beasiswa</a></li>
+    <li><a href="#daftar" class="nav-cta">Daftar Sekarang</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="glow-gold"></div>
+  <div class="hero-eyebrow">
+    <span class="eyebrow-dot"></span>
+    Tahun Ajaran 2025/2026
+  </div>
+  <h1 class="hero-title">
+    Informasi <span class="accent">Biaya Pendidikan</span><br>
+    SMK Ciledug Al Musaddadiyah
+  </h1>
+  <p class="hero-subtitle">
+    Investasi terbaik untuk masa depan. Transparansi biaya, berbagai pilihan jalur beasiswa, dan kemudahan pembayaran untuk mendukung pendidikan berkualitas putra-putri Anda.
+  </p>
+</section>
+
+<!-- BIAYA SECTION -->
+<section id="biaya">
+  <div class="section-header reveal">
+    <div class="section-kicker">✦ Rincian Biaya</div>
+    <h2 class="section-title">Biaya <span class="accent">Pendaftaran</span></h2>
+    <p class="section-desc">
+      Berikut adalah rincian lengkap biaya masuk untuk peserta didik baru tahun ajaran 2025/2026. Pilih jenis kelamin untuk melihat detail biaya.
+    </p>
+  </div>
+
+  <div class="price-container reveal">
+    <div class="price-toggle">
+      <button class="toggle-btn active" onclick="switchGender('laki')" id="btn-laki">
+        👨 Laki-Laki
+      </button>
+      <button class="toggle-btn" onclick="switchGender('perempuan')" id="btn-perempuan">
+        👩 Perempuan
+      </button>
+    </div>
+
+    <div class="price-table" id="table-laki">
+      <div class="table-header">
+        <div>No.</div>
+        <div>Komponen Pembiayaan</div>
+        <div>Laki-Laki</div>
+        <div>Perempuan</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">1.</div>
+        <div class="row-label">Pendaftaran</div>
+        <div class="row-price">Rp. 200.000,-</div>
+        <div class="row-price">Rp. 200.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">2.</div>
+        <div class="row-label">USP (Uang Sumbangan Pengembangan)</div>
+        <div class="row-price">Rp. 1.700.000,-</div>
+        <div class="row-price">Rp. 1.700.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">3.</div>
+        <div class="row-label">SPP 1 Bulan</div>
+        <div class="row-price">Rp. 220.000,-</div>
+        <div class="row-price">Rp. 220.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">4.</div>
+        <div class="row-label">MPLS (Masa Pengenalan Lingkungan Sekolah)</div>
+        <div class="row-price">Rp. 95.000,-</div>
+        <div class="row-price">Rp. 95.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">5.</div>
+        <div class="row-label">OSIS (Organisasi Siswa Intra Sekolah)</div>
+        <div class="row-price">Rp. 175.000,-</div>
+        <div class="row-price">Rp. 175.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">6.</div>
+        <div class="row-label">Perpustakaan</div>
+        <div class="row-price">Rp. 50.000,-</div>
+        <div class="row-price">Rp. 50.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">7.</div>
+        <div class="row-label">Partisipasi Peningkatan Mutu Sekolah</div>
+        <div class="row-price">Rp. 850.000,-</div>
+        <div class="row-price">Rp. 850.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">8.</div>
+        <div class="row-label">Bina Karakter, Kepanduan Pramuka</div>
+        <div class="row-price">Rp. 195.000,-</div>
+        <div class="row-price">Rp. 195.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">9.</div>
+        <div class="row-label">Kaos Olahraga & Atribut</div>
+        <div class="row-price">Rp. 250.000,-</div>
+        <div class="row-price">Rp. 250.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">10.</div>
+        <div class="row-label">Batik</div>
+        <div class="row-price">Rp. 100.000,-</div>
+        <div class="row-price">Rp. 150.000,-</div>
+      </div>
+      <div class="table-row">
+        <div class="row-num">11.</div>
+        <div class="row-label">Kesehatan</div>
+        <div class="row-price">Rp. 100.000,-</div>
+        <div class="row-price">Rp. 100.000,-</div>
+      </div>
+      <div class="table-total">
+        <div></div>
+        <div class="total-label">Total Biaya SMK Ciledug</div>
+        <div class="total-price">Rp. 3.935.000,-</div>
+        <div class="total-price">Rp. 3.985.000,-</div>
+      </div>
+    </div>
+
+    <div class="info-boxes">
+      <div class="info-box reveal">
+        <div class="info-icon">💳</div>
+        <div class="info-title">Sistem Pembayaran</div>
+        <div class="info-desc">
+          Pembayaran dapat dilakukan secara <span class="info-highlight">tunai</span> atau <span class="info-highlight">transfer</span> ke rekening resmi sekolah.
+        </div>
+      </div>
+      <div class="info-box reveal">
+        <div class="info-icon">📋</div>
+        <div class="info-title">Cicilan Tersedia</div>
+        <div class="info-desc">
+          Kami menyediakan <span class="info-highlight">skema cicilan</span> untuk meringankan beban orang tua. Konsultasikan dengan bagian keuangan.
+        </div>
+      </div>
+      <div class="info-box reveal">
+        <div class="info-icon">🎯</div>
+        <div class="info-title">Sudah Termasuk</div>
+        <div class="info-desc">
+          Biaya mencakup <span class="info-highlight">seragam lengkap, buku, kegiatan ekstrakurikuler</span>, dan fasilitas pembelajaran modern.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DISCOUNT SECTION -->
+<section id="diskon">
+  <div class="price-container">
+    <div class="discount-section reveal">
+      <div class="discount-badge">
+        <span>⭐</span>
+        Penawaran Khusus
+      </div>
+      <h3 class="discount-title">Diskon & <span class="gold-text">Keringanan Biaya</span></h3>
+      <p class="discount-desc">
+        Kami memahami pentingnya pendidikan berkualitas yang terjangkau. Berikut adalah berbagai program keringanan yang dapat Anda manfaatkan:
+      </p>
+      <ul class="discount-list">
+        <li>
+          <strong>Diskon Alumni 50%</strong> — Peserta didik baru dari SMP dan MTs Al Musaddadiyah berhak mendapatkan potongan 50% dari biaya USP
+        </li>
+        <li>
+          <strong>Beasiswa 100%</strong> — Program beasiswa penuh untuk siswa berprestasi akademik atau dari keluarga kurang mampu
+        </li>
+        <li>
+          <strong>Beasiswa 75%</strong> — Keringanan biaya untuk siswa dengan prestasi olahraga atau seni di tingkat kabupaten/provinsi
+        </li>
+        <li>
+          <strong>Beasiswa 50%</strong> — Subsidi untuk siswa yang menunjukkan potensi dan semangat belajar tinggi
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- BEASISWA INFO -->
+<section id="beasiswa" style="background: linear-gradient(180deg, rgba(21,114,232,0.05) 0%, transparent 100%); padding-top: 4rem;">
+  <div class="section-header reveal">
+    <div class="section-kicker">✦ Program Beasiswa</div>
+    <h2 class="section-title">Raih <span class="accent">Beasiswa</span> Impianmu</h2>
+    <p class="section-desc">
+      Jangan biarkan kendala biaya menghalangi impianmu. Kami memiliki 3 jalur beasiswa dengan total kuota terbatas untuk siswa-siswi terbaik.
+    </p>
+  </div>
+
+  <div class="price-container">
+    <div class="info-boxes">
+      <div class="info-box reveal">
+        <div class="info-icon">📚</div>
+        <div class="info-title">Beasiswa Akademik</div>
+        <div class="info-desc">
+          Untuk siswa dengan prestasi akademik cemerlang. Pembebasan biaya SPP hingga <span class="info-highlight">100%</span> selama masa studi.
+        </div>
+      </div>
+      <div class="info-box reveal">
+        <div class="info-icon">🏆</div>
+        <div class="info-title">Beasiswa Atlet</div>
+        <div class="info-desc">
+          Bagi atlet berprestasi yang ingin mengembangkan bakatnya. Keringanan hingga <span class="info-highlight">75%</span> dari total biaya.
+        </div>
+      </div>
+      <div class="info-box reveal">
+        <div class="info-icon">❤️</div>
+        <div class="info-title">CALM Peduli</div>
+        <div class="info-desc">
+          Program kepedulian untuk keluarga kurang mampu. Subsidi hingga <span class="info-highlight">100%</span> dengan verifikasi dokumen.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="daftar">
+  <div class="cta-box reveal">
+    <div class="section-kicker">✦ Wujudkan Masa Depan Cemerlang</div>
+    <h2 class="cta-title">Daftar Sekarang dan Raih <span class="gold-text">Kesempatanmu</span></h2>
+    <p class="cta-sub">
+      Investasi pendidikan adalah investasi terbaik. Dengan berbagai pilihan beasiswa dan kemudahan pembayaran, tidak ada alasan untuk menunda impian.
+    </p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">📝 Daftar Online Sekarang</a>
+      <a href="tel:+62" class="btn-secondary">💬 Konsultasi Biaya</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    SMKS Ciledug <span>Al Musaddadiyah</span><br>
+    <span style="color:var(--text-muted);opacity:0.6;font-weight:400;font-size:0.7rem;">Informasi Biaya TA 2025/2026</span>
+  </div>
+  <div class="footer-copy">© 2025 SMKS Ciledug Al Musaddadiyah. Hak cipta dilindungi.</div>
+</footer>
+
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Gender toggle
+  function switchGender(gender) {
+    const btnLaki = document.getElementById('btn-laki');
+    const btnPerempuan = document.getElementById('btn-perempuan');
+    
+    if (gender === 'laki') {
+      btnLaki.classList.add('active');
+      btnPerempuan.classList.remove('active');
+    } else {
+      btnPerempuan.classList.add('active');
+      btnLaki.classList.remove('active');
+    }
+  }
+</script>
+
+</body>
+</html>
