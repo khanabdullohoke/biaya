@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Biaya Pendidikan SMKS Ciledug Al Musaddadiyah TA 2025/2026</title>
+<meta name="description" content="Informasi lengkap biaya pendidikan SMKS Ciledug Al Musaddadiyah Garut TA 2025/2026 — rincian biaya, program beasiswa hingga 100%, dan kemudahan cicilan."/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Biaya Pendidikan SMKS Ciledug Al Musaddadiyah 2025/2026"/>
+<meta property="og:description" content="Transparansi biaya pendidikan lengkap, beasiswa, dan cicilan untuk calon siswa baru SMKS Ciledug Garut."/>
+<meta property="og:type" content="website"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
@@ -32,7 +37,7 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   @media (prefers-reduced-motion: no-preference) {
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
   }
 
   body {
@@ -116,6 +121,65 @@
 
   .nav-links a:hover { color: var(--gold-bright); }
 
+  /* Hamburger */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 34px; height: 34px;
+    flex-shrink: 0;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform .3s, opacity .3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile drawer */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    top: 65px; left: 0; right: 0;
+    z-index: 99;
+    background: rgba(0,40,120,0.98);
+    backdrop-filter: blur(16px);
+    padding: 12px 6vw 20px;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    gap: 4px;
+  }
+  .nav-drawer.open { display: flex; }
+  .nav-drawer a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: all .2s;
+    letter-spacing: .04em;
+  }
+  .nav-drawer a:hover { color: var(--gold-bright); background: rgba(255,255,255,.05); }
+  .nav-drawer .nav-cta {
+    margin-top: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue) !important;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 100px;
+  }
+
   .nav-cta {
     background: linear-gradient(135deg, var(--gold), var(--gold-bright));
     color: var(--deep-blue) !important;
@@ -134,13 +198,14 @@
   /* ── HERO ── */
   .hero {
     position: relative;
-    min-height: 75vh;
+    height: 75vh;
+    min-height: 480px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-    padding: 8rem 6vw 3rem;
+    padding: 5rem 6vw 3rem;
     overflow: hidden;
   }
 
@@ -604,8 +669,8 @@
   /* ── ANIMATIONS ── */
   .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(.22,1,.36,1), transform 0.6s cubic-bezier(.22,1,.36,1);
   }
 
   .reveal.visible {
@@ -623,8 +688,13 @@
       display: none;
     }
 
+    .nav-hamburger {
+      display: flex;
+    }
+
     .hero {
-      padding: 6rem 5vw 2rem;
+      padding: 4rem 5vw 2rem;
+      height: auto;
       min-height: 60vh;
     }
 
@@ -697,7 +767,16 @@
     <li><a href="#beasiswa">Beasiswa</a></li>
     <li><a href="#daftar" class="nav-cta">Daftar Sekarang</a></li>
   </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Buka menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="#biaya">Biaya</a>
+  <a href="#diskon">Diskon</a>
+  <a href="#beasiswa">Beasiswa</a>
+  <a href="#daftar" class="nav-cta">Daftar Sekarang</a>
+</div>
 
 <!-- HERO -->
 <section class="hero">
@@ -934,23 +1013,57 @@
 </footer>
 
 <script>
-  // Scroll reveal
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
+  // Hamburger menu
+  const hamburger = document.getElementById('nav-hamburger');
+  const drawer = document.getElementById('nav-drawer');
+  hamburger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+    });
+  });
+
+  // Smooth scroll dengan offset nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const navH = document.querySelector('nav').offsetHeight;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // Scroll reveal dengan stagger per section
+  const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(e => {
       if (e.isIntersecting) {
         e.target.classList.add('visible');
-        observer.unobserve(e.target);
+        revealObserver.unobserve(e.target);
       }
     });
-  }, { threshold: 0.12 });
-  revealEls.forEach(el => observer.observe(el));
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('section, .cta-section, footer').forEach(sec => {
+    sec.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      revealObserver.observe(el);
+    });
+  });
 
   // Gender toggle
   function switchGender(gender) {
     const btnLaki = document.getElementById('btn-laki');
     const btnPerempuan = document.getElementById('btn-perempuan');
-    
     if (gender === 'laki') {
       btnLaki.classList.add('active');
       btnPerempuan.classList.remove('active');
@@ -959,6 +1072,12 @@
       btnLaki.classList.remove('active');
     }
   }
+
+  // Nav scrolled shadow
+  const navEl = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    navEl.style.boxShadow = window.scrollY > 30 ? '0 4px 32px rgba(0,40,120,.5)' : '';
+  }, { passive: true });
 </script>
 
 </body>
