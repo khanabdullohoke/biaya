@@ -14,22 +14,23 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
   :root {
-    --deep-blue: #003D8F;
-    --mid-blue: #0050B8;
-    --blue-2: #0060D6;
-    --blue-3: #1572E8;
-    --blue-glow: #3B8BFF;
-    --blue-light: #63A6FF;
-    --blue-pale: #C8DEFF;
-    --gold: #C9A84C;
-    --gold-bright: #E8C46A;
-    --gold-pale: #FFF7E0;
-    --gold-glow: rgba(201,168,76,0.18);
+    /* Persib Bandung Official Colors */
+    --deep-blue: #0D0FA8;        /* Persib royal blue deep */
+    --mid-blue: #1A1ECC;         /* Persib blue utama */
+    --blue-2: #2327E0;           /* blue medium */
+    --blue-3: #3B40F0;           /* blue vivid */
+    --blue-glow: #5C60FF;        /* blue glow */
+    --blue-light: #9B9EFF;       /* blue light tint */
+    --blue-pale: #D0D1FF;
+    --gold: #F5C800;             /* kuning bintang Persib */
+    --gold-bright: #FFD740;      /* kuning cerah */
+    --gold-pale: #FFF8CC;
+    --gold-glow: rgba(245,200,0,0.18);
     --white: #FFFFFF;
-    --off-white: #F0F6FF;
-    --text-muted: #A8C8F0;
-    --border: rgba(201,168,76,0.22);
-    --border-blue: rgba(99,166,255,0.2);
+    --off-white: #F0F0FF;
+    --text-muted: #A8AAEE;
+    --border: rgba(245,200,0,0.30);
+    --border-blue: rgba(91,96,255,0.25);
     --font-display: 'Plus Jakarta Sans', sans-serif;
     --font-body: 'DM Sans', sans-serif;
   }
@@ -42,7 +43,7 @@
 
   body {
     font-family: var(--font-body);
-    background: var(--deep-blue);
+    background: linear-gradient(160deg, #0D0FA8 0%, #1A1ECC 60%, #0A0C90 100%);
     color: var(--white);
     overflow-x: hidden;
     line-height: 1.6;
@@ -59,7 +60,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 1.2rem 6vw;
-    background: rgba(0,61,143,0.88);
+    background: rgba(13,15,168,0.92);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
   }
@@ -151,7 +152,7 @@
     position: fixed;
     top: 65px; left: 0; right: 0;
     z-index: 99;
-    background: rgba(0,40,120,0.98);
+    background: rgba(10,12,140,0.98);
     backdrop-filter: blur(16px);
     padding: 12px 6vw 20px;
     border-bottom: 1px solid var(--border);
@@ -191,7 +192,7 @@
   }
 
   .nav-cta:hover {
-    box-shadow: 0 0 24px rgba(201,168,76,0.5) !important;
+    box-shadow: 0 0 24px rgba(245,200,0,0.55) !important;
     transform: translateY(-1px);
   }
 
@@ -214,7 +215,7 @@
     position: absolute;
     width: 700px; height: 700px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(37,99,199,0.14) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(58,64,240,0.14) 0%, transparent 70%);
     top: -200px; left: 50%;
     transform: translateX(-50%);
     pointer-events: none;
@@ -224,7 +225,7 @@
     position: absolute;
     width: 400px; height: 400px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(201,168,76,0.09) 0%, transparent 65%);
+    background: radial-gradient(circle, rgba(245,200,0,0.09) 0%, transparent 65%);
     bottom: 80px; right: -100px;
     pointer-events: none;
   }
@@ -358,7 +359,7 @@
     background: linear-gradient(135deg, var(--gold), var(--gold-bright));
     color: var(--deep-blue);
     border-color: var(--gold);
-    box-shadow: 0 0 20px rgba(201,168,76,0.4);
+    box-shadow: 0 0 20px rgba(245,200,0,0.45);
   }
 
   .price-table {
@@ -371,7 +372,7 @@
   .table-header {
     display: grid;
     grid-template-columns: 60px 1fr 140px 140px;
-    background: linear-gradient(135deg, rgba(21,114,232,0.15), rgba(0,96,214,0.1));
+    background: linear-gradient(135deg, rgba(245,200,0,0.12), rgba(35,39,224,0.12));
     border-bottom: 1px solid var(--border-blue);
     padding: 1.2rem 1.5rem;
     font-family: var(--font-display);
@@ -422,7 +423,7 @@
     display: grid;
     grid-template-columns: 60px 1fr 140px 140px;
     padding: 1.5rem 1.5rem;
-    background: linear-gradient(135deg, rgba(201,168,76,0.12), rgba(232,196,106,0.08));
+    background: linear-gradient(135deg, rgba(58,64,240,0.14), rgba(245,200,0,0.08));
     border-top: 2px solid var(--gold);
     font-family: var(--font-display);
     font-weight: 800;
@@ -488,7 +489,7 @@
 
   /* ── DISCOUNT SECTION ── */
   .discount-section {
-    background: linear-gradient(135deg, rgba(21,114,232,0.1), rgba(0,96,214,0.05));
+    background: linear-gradient(135deg, rgba(58,64,240,0.14), rgba(35,39,224,0.05));
     border: 1px solid var(--border-blue);
     border-radius: 20px;
     padding: 2.5rem;
@@ -563,7 +564,7 @@
   }
 
   .cta-box {
-    background: linear-gradient(135deg, rgba(21,114,232,0.15), rgba(0,96,214,0.08));
+    background: linear-gradient(135deg, rgba(245,200,0,0.12), rgba(35,39,224,0.08));
     border: 1px solid var(--border-blue);
     border-radius: 24px;
     padding: 3.5rem 3rem;
@@ -620,11 +621,11 @@
   .btn-primary {
     background: linear-gradient(135deg, var(--gold), var(--gold-bright));
     color: var(--deep-blue);
-    box-shadow: 0 4px 20px rgba(201,168,76,0.3);
+    box-shadow: 0 4px 20px rgba(245,200,0,0.35);
   }
 
   .btn-primary:hover {
-    box-shadow: 0 6px 30px rgba(201,168,76,0.5);
+    box-shadow: 0 6px 30px rgba(245,200,0,0.55);
     transform: translateY(-2px);
   }
 
@@ -643,7 +644,7 @@
   /* ── FOOTER ── */
   footer {
     padding: 2.5rem 6vw;
-    background: rgba(0,50,120,0.3);
+    background: rgba(13,15,168,0.35);
     border-top: 1px solid var(--border);
     display: flex;
     justify-content: space-between;
@@ -678,6 +679,25 @@
     transform: translateY(0);
   }
 
+  /* ── GENDER COLUMN TOGGLE (semua ukuran layar) ── */
+  /* Default: tampilkan kedua kolom */
+  .col-laki   { display: block; }
+  .col-perempuan { display: block; }
+
+  /* Saat mode single-column aktif (diterapkan via JS di layar sempit) */
+  body.show-laki .col-perempuan     { display: none; }
+  body.show-perempuan .col-laki    { display: none; }
+
+  /* Di layar sempit, aktifkan single-column mode secara default */
+  @media (max-width: 540px) {
+    body:not(.show-perempuan) .col-perempuan { display: none; }
+    body.show-perempuan .col-laki            { display: none; }
+
+    .table-header, .table-row, .table-total {
+      grid-template-columns: 36px 1fr 120px !important;
+    }
+  }
+
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     nav {
@@ -702,24 +722,38 @@
       padding: 3rem 5vw;
     }
 
+    .price-table {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    /* 541-768px: 4 kolom masih muat tapi lebih compact */
     .table-header, .table-row, .table-total {
-      grid-template-columns: 40px 1fr 100px;
-      font-size: 0.8rem;
-      padding: 1rem;
+      grid-template-columns: 36px 1fr 110px 110px;
+      font-size: 0.78rem;
+      padding: 0.85rem 0.9rem;
     }
 
-    .row-price:last-child,
-    .table-header > *:last-child,
-    .total-price:last-child {
-      display: none;
+    .row-label {
+      font-size: 0.85rem;
     }
 
-    .price-toggle {
-      flex-direction: column;
+    .row-price, .total-price {
+      font-size: 0.82rem;
     }
 
     .toggle-btn {
-      width: 100%;
+      padding: 0.65rem 1.2rem;
+      font-size: 0.82rem;
+    }
+
+    .price-toggle {
+      gap: 0.6rem;
+    }
+
+    /* Header label kolom harga di 541-768 */
+    .col-header-price {
+      display: none;
     }
 
     .info-boxes {
@@ -818,80 +852,80 @@
       <div class="table-header">
         <div>No.</div>
         <div>Komponen Pembiayaan</div>
-        <div>Laki-Laki</div>
-        <div>Perempuan</div>
+        <div class="col-laki">Laki-Laki</div>
+        <div class="col-perempuan">Perempuan</div>
       </div>
       <div class="table-row">
         <div class="row-num">1.</div>
         <div class="row-label">Pendaftaran</div>
-        <div class="row-price">Rp. 200.000,-</div>
-        <div class="row-price">Rp. 200.000,-</div>
+        <div class="row-price col-laki">Rp. 200.000,-</div>
+        <div class="row-price col-perempuan">Rp. 200.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">2.</div>
         <div class="row-label">USP (Uang Sumbangan Pengembangan)</div>
-        <div class="row-price">Rp. 1.700.000,-</div>
-        <div class="row-price">Rp. 1.700.000,-</div>
+        <div class="row-price col-laki">Rp. 1.700.000,-</div>
+        <div class="row-price col-perempuan">Rp. 1.700.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">3.</div>
         <div class="row-label">SPP 1 Bulan</div>
-        <div class="row-price">Rp. 220.000,-</div>
-        <div class="row-price">Rp. 220.000,-</div>
+        <div class="row-price col-laki">Rp. 220.000,-</div>
+        <div class="row-price col-perempuan">Rp. 220.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">4.</div>
         <div class="row-label">MPLS (Masa Pengenalan Lingkungan Sekolah)</div>
-        <div class="row-price">Rp. 95.000,-</div>
-        <div class="row-price">Rp. 95.000,-</div>
+        <div class="row-price col-laki">Rp. 95.000,-</div>
+        <div class="row-price col-perempuan">Rp. 95.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">5.</div>
         <div class="row-label">OSIS (Organisasi Siswa Intra Sekolah)</div>
-        <div class="row-price">Rp. 175.000,-</div>
-        <div class="row-price">Rp. 175.000,-</div>
+        <div class="row-price col-laki">Rp. 175.000,-</div>
+        <div class="row-price col-perempuan">Rp. 175.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">6.</div>
         <div class="row-label">Perpustakaan</div>
-        <div class="row-price">Rp. 50.000,-</div>
-        <div class="row-price">Rp. 50.000,-</div>
+        <div class="row-price col-laki">Rp. 50.000,-</div>
+        <div class="row-price col-perempuan">Rp. 50.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">7.</div>
         <div class="row-label">Partisipasi Peningkatan Mutu Sekolah</div>
-        <div class="row-price">Rp. 850.000,-</div>
-        <div class="row-price">Rp. 850.000,-</div>
+        <div class="row-price col-laki">Rp. 850.000,-</div>
+        <div class="row-price col-perempuan">Rp. 850.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">8.</div>
         <div class="row-label">Bina Karakter, Kepanduan Pramuka</div>
-        <div class="row-price">Rp. 195.000,-</div>
-        <div class="row-price">Rp. 195.000,-</div>
+        <div class="row-price col-laki">Rp. 195.000,-</div>
+        <div class="row-price col-perempuan">Rp. 195.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">9.</div>
         <div class="row-label">Kaos Olahraga & Atribut</div>
-        <div class="row-price">Rp. 250.000,-</div>
-        <div class="row-price">Rp. 250.000,-</div>
+        <div class="row-price col-laki">Rp. 250.000,-</div>
+        <div class="row-price col-perempuan">Rp. 250.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">10.</div>
         <div class="row-label">Batik</div>
-        <div class="row-price">Rp. 100.000,-</div>
-        <div class="row-price">Rp. 150.000,-</div>
+        <div class="row-price col-laki">Rp. 100.000,-</div>
+        <div class="row-price col-perempuan">Rp. 150.000,-</div>
       </div>
       <div class="table-row">
         <div class="row-num">11.</div>
         <div class="row-label">Kesehatan</div>
-        <div class="row-price">Rp. 100.000,-</div>
-        <div class="row-price">Rp. 100.000,-</div>
+        <div class="row-price col-laki">Rp. 100.000,-</div>
+        <div class="row-price col-perempuan">Rp. 100.000,-</div>
       </div>
       <div class="table-total">
         <div></div>
         <div class="total-label">Total Biaya SMK Ciledug</div>
-        <div class="total-price">Rp. 3.935.000,-</div>
-        <div class="total-price">Rp. 3.985.000,-</div>
+        <div class="total-price col-laki">Rp. 3.935.000,-</div>
+        <div class="total-price col-perempuan">Rp. 3.985.000,-</div>
       </div>
     </div>
 
@@ -952,7 +986,7 @@
 </section>
 
 <!-- BEASISWA INFO -->
-<section id="beasiswa" style="background: linear-gradient(180deg, rgba(21,114,232,0.05) 0%, transparent 100%); padding-top: 4rem;">
+<section id="beasiswa" style="background: linear-gradient(180deg, rgba(58,64,240,0.07) 0%, transparent 100%); padding-top: 4rem;">
   <div class="section-header reveal">
     <div class="section-kicker">✦ Program Beasiswa</div>
     <h2 class="section-title">Raih <span class="accent">Beasiswa</span> Impianmu</h2>
@@ -1060,23 +1094,38 @@
     });
   });
 
-  // Gender toggle
+  // Gender toggle — mengontrol kolom via class pada <body>
   function switchGender(gender) {
     const btnLaki = document.getElementById('btn-laki');
     const btnPerempuan = document.getElementById('btn-perempuan');
+    const body = document.body;
+
     if (gender === 'laki') {
       btnLaki.classList.add('active');
       btnPerempuan.classList.remove('active');
+      body.classList.remove('show-perempuan');
+      body.classList.add('show-laki');
     } else {
       btnPerempuan.classList.add('active');
       btnLaki.classList.remove('active');
+      body.classList.remove('show-laki');
+      body.classList.add('show-perempuan');
     }
   }
+
+  // Inisialisasi: deteksi layar sempit dan aktifkan mode single-column
+  function initGenderToggle() {
+    // Di layar ≤540px, toggle benar-benar menyembunyikan kolom
+    // Di layar lebih lebar, kedua kolom tetap tampil
+    // Default aktif: laki-laki
+    document.body.classList.add('show-laki');
+  }
+  initGenderToggle();
 
   // Nav scrolled shadow
   const navEl = document.querySelector('nav');
   window.addEventListener('scroll', () => {
-    navEl.style.boxShadow = window.scrollY > 30 ? '0 4px 32px rgba(0,40,120,.5)' : '';
+    navEl.style.boxShadow = window.scrollY > 30 ? '0 4px 32px rgba(10,12,140,0.6)' : '';
   }, { passive: true });
 </script>
 
