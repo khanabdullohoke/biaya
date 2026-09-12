@@ -1792,6 +1792,25 @@
     let idleTimer = null;
     let sessionExpiresAt = 0; // waktu (ms epoch) token admin kedaluwarsa
 
+    // Data biaya awal (default/seed). Dipakai HANYA sebagai fallback saat
+    // backend (Code.gs) belum terhubung / gagal diakses, supaya halaman
+    // tetap menampilkan rincian biaya yang benar alih-alih pesan error.
+    // Begitu backend berhasil merespons, data ini otomatis digantikan oleh
+    // data asli dari server (lihat loadPublicData()).
+    const DEFAULT_BIAYA_ITEMS = [
+      { id: 1,  label: 'Pendaftaran',                               laki: 200000,   perempuan: 200000 },
+      { id: 2,  label: 'USP (Uang Sumbangan Pengembangan)',         laki: 1700000,  perempuan: 1700000 },
+      { id: 3,  label: 'SPP 1 Bulan',                                laki: 220000,   perempuan: 220000 },
+      { id: 4,  label: 'MPLS (Masa Pengenalan Lingkungan Sekolah)',  laki: 95000,    perempuan: 95000 },
+      { id: 5,  label: 'OSIS (Organisasi Siswa Intra Sekolah)',      laki: 175000,   perempuan: 175000 },
+      { id: 6,  label: 'Perpustakaan',                               laki: 50000,    perempuan: 50000 },
+      { id: 7,  label: 'Partisipasi Peningkatan Mutu Sekolah',       laki: 850000,   perempuan: 850000 },
+      { id: 8,  label: 'Bina Karakter, Kepanduan Pramuka',           laki: 195000,   perempuan: 195000 },
+      { id: 9,  label: 'Kaos Olahraga & Atribut',                    laki: 250000,   perempuan: 250000 },
+      { id: 10, label: 'Batik',                                      laki: 100000,   perempuan: 150000 },
+      { id: 11, label: 'Kesehatan',                                  laki: 100000,   perempuan: 100000 }
+    ];
+
     /* ---------- util umum ---------- */
     function formatRupiah(n) {
       const num = Number(n);
@@ -1878,19 +1897,11 @@
         biayaData = data.items.map(r => ({ id: r.id, label: r.label, laki: r.laki, perempuan: r.perempuan }));
         renderPublicTable();
       } catch (e) {
-        biayaData = [];
-        if (rowsEl) {
-          rowsEl.innerHTML = '';
-          const row = document.createElement('div');
-          row.className = 'table-row';
-          const msg = document.createElement('div');
-          msg.className = 'row-label';
-          msg.style.gridColumn = '1 / -1';
-          msg.textContent = 'Gagal memuat data biaya dari server. Silakan muat ulang halaman atau coba lagi nanti.';
-          row.appendChild(msg);
-          rowsEl.appendChild(row);
-        }
-        console.error('[biaya] gagal memuat data:', e);
+        // Backend belum terhubung / gagal diakses -> pakai data awal (default)
+        // sebagai fallback, bukan tampilkan error ke pengunjung publik.
+        biayaData = DEFAULT_BIAYA_ITEMS.map(r => ({ ...r }));
+        renderPublicTable();
+        console.error('[biaya] gagal memuat data dari server, menampilkan data default lokal:', e);
       }
     }
 
