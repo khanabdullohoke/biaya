@@ -1056,6 +1056,136 @@
       text-align: center;
     }
   }
+
+  /* ── RESPONSIVE: LAYAR SANGAT SEMPIT (ponsel kecil, ≤400px) ── */
+  @media (max-width: 400px) {
+    nav {
+      padding: 0.85rem 4vw;
+    }
+
+    .nav-logo-ring, .nav-brand img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .nav-name {
+      font-size: 0.7rem;
+    }
+
+    .hero {
+      padding: 3.2rem 4vw 1.5rem;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.65rem;
+      padding: 0.35rem 0.9rem;
+    }
+
+    .hero-subtitle {
+      font-size: 0.92rem;
+    }
+
+    section {
+      padding: 2.5rem 4vw;
+    }
+
+    .section-desc {
+      font-size: 0.92rem;
+    }
+
+    /* Tabel biaya: index + label + 1 kolom harga (mode single-column sudah
+       aktif lewat breakpoint 540px), diperkecil lagi agar tidak sesak. */
+    .table-header, .table-row, .table-total {
+      grid-template-columns: 26px 1fr 96px !important;
+      padding: 0.7rem 0.7rem !important;
+      font-size: 0.72rem !important;
+    }
+
+    .row-label {
+      font-size: 0.8rem;
+    }
+
+    .row-price, .total-price {
+      font-size: 0.75rem !important;
+    }
+
+    .total-price {
+      font-size: 0.85rem !important;
+    }
+
+    .toggle-btn {
+      padding: 0.6rem 0.9rem;
+      font-size: 0.76rem;
+    }
+
+    .info-box {
+      padding: 1.3rem;
+    }
+
+    .discount-section {
+      padding: 1.5rem 1rem;
+    }
+
+    .discount-title {
+      font-size: 1.4rem;
+    }
+
+    .cta-box {
+      padding: 2rem 1.25rem;
+    }
+
+    .cta-sub {
+      font-size: 0.95rem;
+    }
+
+    /* Modal admin: kurangi padding & lebar agar pas di layar kecil tanpa
+       memotong konten atau memaksa scroll horizontal. */
+    .admin-overlay {
+      padding: 4vh 3vw;
+    }
+
+    .admin-modal {
+      padding: 1.5rem 1.1rem;
+    }
+
+    .admin-modal h3 {
+      font-size: 1.1rem;
+    }
+
+    .admin-btn-row {
+      flex-direction: column;
+    }
+
+    .admin-btn {
+      width: 100%;
+    }
+
+    .admin-toolbar > div:last-child {
+      width: 100%;
+    }
+
+    .admin-toolbar .admin-btn {
+      flex: 1;
+    }
+  }
+
+  /* ── RESPONSIVE: TINGGI LAYAR PENDEK (mode lanskap ponsel) ── */
+  @media (max-height: 480px) and (orientation: landscape) {
+    .hero {
+      height: auto;
+      min-height: auto;
+      padding: 5.5rem 6vw 2rem;
+    }
+
+    .admin-overlay {
+      align-items: flex-start;
+      padding: 3vh 4vw;
+    }
+
+    .admin-rows {
+      max-height: 34vh;
+    }
+  }
 </style>
 </head>
 <body>
@@ -1308,7 +1438,7 @@
       <button type="button" class="admin-btn admin-btn-danger" id="admin-reset-btn">↺ Reset ke Default</button>
     </div>
     <div class="admin-note">
-      Perubahan disimpan di browser perangkat ini (localStorage) dan langsung diterapkan ke tampilan halaman. Karena halaman ini statis (tanpa server), data <strong>tidak otomatis tersinkron</strong> ke pengunjung lain — untuk mempublikasikan perubahan secara permanen ke semua pengunjung, ekspor data lalu minta developer memperbarui berkas sumber.
+      Perubahan disimpan langsung ke database di server dan <strong>otomatis terlihat oleh semua pengunjung</strong> begitu tombol "Simpan Perubahan" ditekan — tidak perlu lagi mengirim data ke developer secara manual.
     </div>
   </div>
 </div>
@@ -1318,7 +1448,7 @@
   <div class="admin-modal">
     <button type="button" class="admin-close" id="admin-pw-close" aria-label="Tutup">✕</button>
     <h3 id="admin-pw-title">🔑 Ganti Kata Sandi Admin</h3>
-    <p class="admin-modal-sub">Kata sandi baru disimpan sebagai hash SHA-256 di browser ini, bukan teks polos.</p>
+    <p class="admin-modal-sub">Kata sandi baru disimpan sebagai hash (bcrypt) di server, bukan teks polos.</p>
     <div class="admin-error" id="admin-pw-error"></div>
     <div class="admin-success" id="admin-pw-success"></div>
     <form id="admin-pw-form" autocomplete="off">
@@ -1425,61 +1555,45 @@
   }, { passive: true });
 
   /* =========================================================================
-     MODUL DATA BIAYA + PANEL ADMIN
+     MODUL DATA BIAYA + PANEL ADMIN (terhubung ke backend Google Apps Script)
      ------------------------------------------------------------------------
-     Catatan jujur soal keamanan: halaman ini adalah HTML statis tanpa server/
-     backend. Autentikasi di sini (hash SHA-256 + rate limiting) mencegah
-     orang iseng mengubah data lewat UI biasa, TAPI siapa pun yang membuka
-     DevTools tetap bisa memanggil fungsi JS secara langsung di browser
-     mereka sendiri — itu batas keamanan yang mungkin dicapai tanpa server.
-     Perubahan data juga hanya tersimpan di localStorage milik browser admin
-     yang login (tidak otomatis tersebar ke semua pengunjung). Untuk
-     keamanan & sinkronisasi data yang sesungguhnya, ini perlu backend
-     (mis. API + database) dengan autentikasi sisi server.
+     Halaman ini mengambil & menyimpan data lewat Web App Google Apps Script
+     (lihat file Code.gs). Login, perubahan data, dan ganti kata sandi
+     seluruhnya diverifikasi di SERVER (Apps Script) — bukan di JavaScript
+     browser — sehingga tidak bisa "dilewati" lewat DevTools. Perubahan yang
+     disimpan admin langsung tersimpan di Google Spreadsheet dan terlihat oleh
+     SEMUA pengunjung. Lihat README.md untuk cara deploy Code.gs, lalu ganti
+     nilai GAS_WEB_APP_URL di bawah dengan URL /exec hasil deploy.
      ========================================================================= */
   (function () {
     'use strict';
 
-    const STORAGE_KEY = 'smk_biaya_data_v1';
-    const ADMIN_HASH_KEY = 'smk_admin_hash_v1';
-    const SESSION_KEY = 'smk_admin_session_v1';
-    const ATTEMPTS_KEY = 'smk_admin_attempts_v1';
+    /* =========================================================================
+       KONFIGURASI BACKEND
+       ------------------------------------------------------------------------
+       Ganti nilai di bawah ini dengan URL Web App Apps Script yang sudah
+       dideploy (diakhiri "/exec"). Lihat README.md untuk langkah deploy.
+       ========================================================================= */
+    const GAS_WEB_APP_URL = window.SMK_API_BASE_URL ||
+      'https://script.google.com/macros/s/GANTI_DENGAN_DEPLOYMENT_ID/exec';
 
-    // Hash default = SHA-256 dari kata sandi awal. Ganti lewat menu
-    // "Ganti Kata Sandi" di dalam panel admin setelah login pertama kali.
-    const DEFAULT_ADMIN_HASH = 'ff52f72750b941328a6b6e51ac02a7f199cf2f24fea4fbeb9ebe0a6cd830a767';
+    const TOKEN_KEY = 'smk_admin_token_v1';
 
-    const SESSION_TIMEOUT_MS = 15 * 60 * 1000; // 15 menit
-    const MAX_ATTEMPTS = 5;
-    const LOCKOUT_MS = 60 * 1000; // 60 detik
+    let biayaData = [];      // data biaya yang sedang ditampilkan ke publik
+    let draftData = [];      // salinan yang sedang diedit di panel admin
+    let idleTimer = null;
+    let sessionExpiresAt = 0; // waktu (ms epoch) token admin kedaluwarsa
 
-    const DEFAULT_DATA = [
-      { id: 1,  label: 'Pendaftaran', laki: 200000, perempuan: 200000 },
-      { id: 2,  label: 'USP (Uang Sumbangan Pengembangan)', laki: 1700000, perempuan: 1700000 },
-      { id: 3,  label: 'SPP 1 Bulan', laki: 220000, perempuan: 220000 },
-      { id: 4,  label: 'MPLS (Masa Pengenalan Lingkungan Sekolah)', laki: 95000, perempuan: 95000 },
-      { id: 5,  label: 'OSIS (Organisasi Siswa Intra Sekolah)', laki: 175000, perempuan: 175000 },
-      { id: 6,  label: 'Perpustakaan', laki: 50000, perempuan: 50000 },
-      { id: 7,  label: 'Partisipasi Peningkatan Mutu Sekolah', laki: 850000, perempuan: 850000 },
-      { id: 8,  label: 'Bina Karakter, Kepanduan Pramuka', laki: 195000, perempuan: 195000 },
-      { id: 9,  label: 'Kaos Olahraga & Atribut', laki: 250000, perempuan: 250000 },
-      { id: 10, label: 'Batik', laki: 100000, perempuan: 150000 },
-      { id: 11, label: 'Kesehatan', laki: 100000, perempuan: 100000 }
-    ];
-
-    let biayaData = [];
-    let nextId = 1;
-
-    /* ---------- util ---------- */
+    /* ---------- util umum ---------- */
     function formatRupiah(n) {
       const num = Number(n);
       if (!Number.isFinite(num)) return 'Rp. 0,-';
       return 'Rp. ' + Math.round(num).toLocaleString('id-ID') + ',-';
     }
 
-    // Bilangan bulat non-negatif yang wajar (maks ~999,999,999) untuk cegah
-    // input aneh/ekstrem merusak tampilan atau perhitungan.
-    function sanitizeAmount(value) {
+    // Dipakai hanya untuk membersihkan input angka secara langsung di UI
+    // (validasi & pembersihan yang sesungguhnya tetap dilakukan di server).
+    function sanitizeAmountLocal(value) {
       const digitsOnly = String(value).replace(/[^\d]/g, '');
       if (digitsOnly === '') return 0;
       const n = parseInt(digitsOnly, 10);
@@ -1487,53 +1601,89 @@
       return Math.min(n, 999999999);
     }
 
-    // Batasi panjang & buang karakter kendali; DOM API (textContent) yang
-    // dipakai saat render sudah otomatis aman dari injeksi HTML/script,
-    // ini lapisan tambahan untuk data yang tersimpan.
-    function sanitizeLabel(value) {
-      return String(value)
-        .replace(/[\u0000-\u001F\u007F<>]/g, '')
-        .trim()
-        .slice(0, 120);
+    function getToken() {
+      return sessionStorage.getItem(TOKEN_KEY) || '';
+    }
+    function setToken(token, expiresInMinutes) {
+      sessionStorage.setItem(TOKEN_KEY, token);
+      sessionExpiresAt = Date.now() + expiresInMinutes * 60 * 1000;
+    }
+    function clearToken() {
+      sessionStorage.removeItem(TOKEN_KEY);
+      sessionExpiresAt = 0;
+    }
+    function hasToken() {
+      return !!getToken();
     }
 
-    async function sha256Hex(text) {
-      const enc = new TextEncoder().encode(text);
-      const buf = await crypto.subtle.digest('SHA-256', enc);
-      return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
-    }
+    /**
+     * Google Apps Script Web App hanya mengenal SATU endpoint (GAS_WEB_APP_URL)
+     * dan hanya method GET/POST — tidak ada PUT/DELETE, tidak ada header custom
+     * (Authorization tidak bisa dibaca di sisi server Apps Script), dan
+     * responsnya SELALU HTTP 200 walau logikanya gagal. Jadi:
+     *  - "path"/aksi dikirim lewat field `action` (bukan lewat URL path).
+     *  - token admin dikirim di dalam body JSON, bukan header.
+     *  - Content-Type memakai 'text/plain' agar browser TIDAK mengirim
+     *    preflight OPTIONS (yang tidak didukung Apps Script) — isi body
+     *    tetap string JSON dan tetap di-parse sebagai JSON di server.
+     *  - sukses/gagal ditentukan dari field `ok`/`status` di body JSON,
+     *    bukan dari kode status HTTP.
+     */
+    async function apiFetch(action, payload) {
+      const token = getToken();
+      const isRead = action === 'getBiaya';
 
-    function isValidDataShape(arr) {
-      return Array.isArray(arr) && arr.every(r =>
-        r && typeof r === 'object' &&
-        typeof r.id !== 'undefined' &&
-        typeof r.label === 'string' &&
-        Number.isFinite(Number(r.laki)) &&
-        Number.isFinite(Number(r.perempuan))
-      );
-    }
-
-    /* ---------- load / save data biaya ---------- */
-    function loadData() {
+      let res;
       try {
-        const raw = localStorage.getItem(STORAGE_KEY);
-        if (!raw) throw new Error('kosong');
-        const parsed = JSON.parse(raw);
-        if (!isValidDataShape(parsed) || parsed.length === 0) throw new Error('format tidak valid');
-        biayaData = parsed.map(r => ({
-          id: Number(r.id),
-          label: sanitizeLabel(r.label),
-          laki: sanitizeAmount(r.laki),
-          perempuan: sanitizeAmount(r.perempuan)
-        }));
-      } catch (e) {
-        biayaData = DEFAULT_DATA.map(r => ({ ...r }));
+        if (isRead) {
+          res = await fetch(GAS_WEB_APP_URL + '?action=' + encodeURIComponent(action));
+        } else {
+          res = await fetch(GAS_WEB_APP_URL, {
+            method: 'POST',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(Object.assign({ action: action, token: token }, payload || {}))
+          });
+        }
+      } catch (networkErr) {
+        const err = new Error('Tidak dapat terhubung ke server. Periksa koneksi internet Anda.');
+        err.isNetworkError = true;
+        throw err;
       }
-      nextId = biayaData.reduce((max, r) => Math.max(max, r.id), 0) + 1;
+
+      let data = null;
+      try { data = await res.json(); } catch (e) { /* respons tanpa body / bukan JSON */ }
+
+      if (!res.ok || !data || data.ok === false) {
+        const err = new Error((data && data.error) || 'Terjadi kesalahan pada server.');
+        err.status = (data && data.status) || res.status;
+        err.data = data;
+        throw err;
+      }
+      return data;
     }
 
-    function saveData() {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(biayaData));
+    /* ---------- data biaya (publik) ---------- */
+    async function loadPublicData() {
+      const rowsEl = document.getElementById('price-rows');
+      try {
+        const data = await apiFetch('getBiaya');
+        biayaData = data.items.map(r => ({ id: r.id, label: r.label, laki: r.laki, perempuan: r.perempuan }));
+        renderPublicTable();
+      } catch (e) {
+        biayaData = [];
+        if (rowsEl) {
+          rowsEl.innerHTML = '';
+          const row = document.createElement('div');
+          row.className = 'table-row';
+          const msg = document.createElement('div');
+          msg.className = 'row-label';
+          msg.style.gridColumn = '1 / -1';
+          msg.textContent = 'Gagal memuat data biaya dari server. Silakan muat ulang halaman atau coba lagi nanti.';
+          row.appendChild(msg);
+          rowsEl.appendChild(row);
+        }
+        console.error('[biaya] gagal memuat data:', e);
+      }
     }
 
     function computeTotals() {
@@ -1624,9 +1774,6 @@
     const pwError = $('admin-pw-error');
     const pwSuccess = $('admin-pw-success');
 
-    let draftData = [];
-    let idleTimer = null;
-
     function showMsg(el, text) {
       if (!el) return;
       el.textContent = text;
@@ -1638,67 +1785,26 @@
       el.textContent = '';
     }
 
-    /* ---------- rate limiting percobaan login ---------- */
-    function getAttempts() {
-      try {
-        return JSON.parse(sessionStorage.getItem(ATTEMPTS_KEY)) || { count: 0, lockUntil: 0 };
-      } catch (e) {
-        return { count: 0, lockUntil: 0 };
-      }
-    }
-    function setAttempts(obj) {
-      sessionStorage.setItem(ATTEMPTS_KEY, JSON.stringify(obj));
-    }
-    function registerFailedAttempt() {
-      const a = getAttempts();
-      a.count += 1;
-      if (a.count >= MAX_ATTEMPTS) {
-        a.lockUntil = Date.now() + LOCKOUT_MS;
-        a.count = 0;
-      }
-      setAttempts(a);
-      return a;
-    }
-    function resetAttempts() {
-      setAttempts({ count: 0, lockUntil: 0 });
-    }
-    function checkLockout() {
-      const a = getAttempts();
-      const remaining = a.lockUntil - Date.now();
-      if (remaining > 0) {
-        return Math.ceil(remaining / 1000);
-      }
-      return 0;
-    }
-
-    /* ---------- sesi admin ---------- */
-    function getAdminHash() {
-      return localStorage.getItem(ADMIN_HASH_KEY) || DEFAULT_ADMIN_HASH;
-    }
-    function startSession() {
-      sessionStorage.setItem(SESSION_KEY, String(Date.now()));
-      resetIdleTimer();
-    }
+    /* ---------- sesi admin ----------
+       Percobaan login yang gagal & lockout sekarang divalidasi di SERVER
+       (lihat backend/routes/auth.js), bukan lagi di localStorage/sessionStorage
+       browser. Di sisi klien kita hanya menyimpan token sesi (JWT) dan waktu
+       kedaluwarsanya untuk keperluan tampilan (mis. logout otomatis di UI). */
     function isSessionValid() {
-      const t = Number(sessionStorage.getItem(SESSION_KEY) || 0);
-      if (!t) return false;
-      return (Date.now() - t) < SESSION_TIMEOUT_MS;
-    }
-    function touchSession() {
-      if (isSessionValid()) sessionStorage.setItem(SESSION_KEY, String(Date.now()));
+      return hasToken() && Date.now() < sessionExpiresAt;
     }
     function endSession() {
-      sessionStorage.removeItem(SESSION_KEY);
+      clearToken();
       if (idleTimer) clearTimeout(idleTimer);
     }
     function resetIdleTimer() {
       if (idleTimer) clearTimeout(idleTimer);
+      const remaining = sessionExpiresAt - Date.now();
+      if (remaining <= 0) return;
       idleTimer = setTimeout(() => {
-        if (!isSessionValid()) {
-          closeAllAdminOverlays();
-          endSession();
-        }
-      }, SESSION_TIMEOUT_MS + 500);
+        closeAllAdminOverlays();
+        endSession();
+      }, remaining + 500);
     }
 
     function openOverlay(el) { el.classList.add('open'); }
@@ -1709,28 +1815,37 @@
       closeOverlay(pwOverlay);
     }
 
+    // Jika server menolak token (401: kedaluwarsa/tidak valid), paksa
+    // kembali ke layar login dengan pesan yang jelas.
+    function handleAuthError(err, errorEl) {
+      if (err && err.status === 401) {
+        endSession();
+        closeAllAdminOverlays();
+        showMsg(loginError, 'Sesi admin sudah berakhir. Silakan login kembali.');
+        openOverlay(loginOverlay);
+        return true;
+      }
+      if (errorEl) showMsg(errorEl, err.message || 'Terjadi kesalahan.');
+      return false;
+    }
+
     /* ---------- buka panel admin ---------- */
     function openLogin() {
       hideMsg(loginError);
+      lockoutMsg.textContent = '';
       passwordInput.value = '';
-      const lockedFor = checkLockout();
-      if (lockedFor > 0) {
-        loginSubmit.disabled = true;
-        showMsg(lockoutMsg, 'Terlalu banyak percobaan gagal. Coba lagi dalam ' + lockedFor + ' detik.');
-      } else {
-        loginSubmit.disabled = false;
-        lockoutMsg.textContent = '';
-      }
+      loginSubmit.disabled = false;
       openOverlay(loginOverlay);
       setTimeout(() => passwordInput.focus(), 50);
     }
 
-    function openAdminPanel() {
+    async function openAdminPanel() {
       draftData = biayaData.map(r => ({ ...r }));
       renderAdminRows();
       hideMsg(panelError);
       hideMsg(panelSuccess);
       openOverlay(panelOverlay);
+      resetIdleTimer();
     }
 
     function renderAdminRows() {
@@ -1761,7 +1876,7 @@
         lakiInput.addEventListener('input', () => {
           const clean = lakiInput.value.replace(/[^\d]/g, '');
           if (clean !== lakiInput.value) lakiInput.value = clean;
-          draftData[idx].laki = sanitizeAmount(clean);
+          draftData[idx].laki = sanitizeAmountLocal(clean);
           updateTotalPreview();
         });
 
@@ -1773,7 +1888,7 @@
         perempuanInput.addEventListener('input', () => {
           const clean = perempuanInput.value.replace(/[^\d]/g, '');
           if (clean !== perempuanInput.value) perempuanInput.value = clean;
-          draftData[idx].perempuan = sanitizeAmount(clean);
+          draftData[idx].perempuan = sanitizeAmountLocal(clean);
           updateTotalPreview();
         });
 
@@ -1801,8 +1916,8 @@
 
     function updateTotalPreview() {
       const totals = draftData.reduce((acc, r) => {
-        acc.laki += sanitizeAmount(r.laki);
-        acc.perempuan += sanitizeAmount(r.perempuan);
+        acc.laki += sanitizeAmountLocal(r.laki);
+        acc.perempuan += sanitizeAmountLocal(r.perempuan);
         return acc;
       }, { laki: 0, perempuan: 0 });
       totalPreview.innerHTML = '';
@@ -1827,32 +1942,28 @@
 
     loginForm.addEventListener('submit', async (e) => {
       e.preventDefault();
-      const lockedFor = checkLockout();
-      if (lockedFor > 0) {
-        showMsg(loginError, 'Akun terkunci sementara. Coba lagi dalam ' + lockedFor + ' detik.');
-        return;
-      }
       const pw = passwordInput.value;
       if (!pw) return;
       loginSubmit.disabled = true;
       loginSubmit.textContent = 'Memeriksa...';
+      hideMsg(loginError);
       try {
-        const hash = await sha256Hex(pw);
-        if (hash === getAdminHash()) {
-          resetAttempts();
-          startSession();
-          closeOverlay(loginOverlay);
-          openAdminPanel();
+        const data = await apiFetch('login', { password: pw });
+        setToken(data.token, data.expiresInMinutes || 15);
+        closeOverlay(loginOverlay);
+        openAdminPanel();
+      } catch (err) {
+        if (err.isNetworkError) {
+          showMsg(loginError, err.message);
+        } else if (err.status === 429) {
+          showMsg(lockoutMsg, err.message);
+        } else if (err.status === 401 && err.data && typeof err.data.attemptsRemaining === 'number') {
+          showMsg(loginError, 'Kata sandi salah. Percobaan tersisa: ' + err.data.attemptsRemaining);
         } else {
-          const a = registerFailedAttempt();
-          if (a.lockUntil > Date.now()) {
-            showMsg(loginError, 'Terlalu banyak percobaan gagal. Coba lagi dalam 60 detik.');
-          } else {
-            showMsg(loginError, 'Kata sandi salah. Percobaan tersisa: ' + (MAX_ATTEMPTS - a.count));
-          }
-          passwordInput.value = '';
-          passwordInput.focus();
+          showMsg(loginError, err.message || 'Gagal login.');
         }
+        passwordInput.value = '';
+        passwordInput.focus();
       } finally {
         loginSubmit.disabled = false;
         loginSubmit.textContent = 'Masuk';
@@ -1864,15 +1975,14 @@
     panelOverlay.addEventListener('click', (e) => { if (e.target === panelOverlay) closeOverlay(panelOverlay); });
 
     addRowBtn.addEventListener('click', () => {
-      touchSession();
-      draftData.push({ id: nextId++, label: '', laki: 0, perempuan: 0 });
+      draftData.push({ id: null, label: '', laki: 0, perempuan: 0 });
       renderAdminRows();
-      const inputs = rowsContainer.querySelectorAll('.admin-row-card');
-      const last = inputs[inputs.length - 1];
+      const cards = rowsContainer.querySelectorAll('.admin-row-card');
+      const last = cards[cards.length - 1];
       if (last) last.querySelector('input').focus();
     });
 
-    saveBtn.addEventListener('click', () => {
+    saveBtn.addEventListener('click', async () => {
       if (!isSessionValid()) {
         showMsg(panelError, 'Sesi admin sudah berakhir. Silakan login kembali.');
         closeOverlay(panelOverlay);
@@ -1881,37 +1991,50 @@
       hideMsg(panelError);
       hideMsg(panelSuccess);
 
-      // Validasi logis: label tidak boleh kosong, harga harus angka >= 0
-      const cleaned = draftData.map(r => ({
-        id: r.id,
-        label: sanitizeLabel(r.label),
-        laki: sanitizeAmount(r.laki),
-        perempuan: sanitizeAmount(r.perempuan)
+      const items = draftData.map(r => ({
+        label: r.label,
+        laki: sanitizeAmountLocal(r.laki),
+        perempuan: sanitizeAmountLocal(r.perempuan)
       }));
-      const emptyLabelIdx = cleaned.findIndex(r => r.label === '');
-      if (emptyLabelIdx !== -1) {
-        showMsg(panelError, 'Baris ke-' + (emptyLabelIdx + 1) + ': nama komponen biaya tidak boleh kosong.');
-        return;
-      }
-      if (cleaned.length === 0) {
-        showMsg(panelError, 'Minimal harus ada 1 komponen biaya.');
-        return;
-      }
 
-      biayaData = cleaned;
-      nextId = biayaData.reduce((max, r) => Math.max(max, r.id), 0) + 1;
-      saveData();
-      renderPublicTable();
-      touchSession();
-      showMsg(panelSuccess, 'Perubahan tersimpan dan tampilan tabel sudah diperbarui.');
+      saveBtn.disabled = true;
+      saveBtn.textContent = 'Menyimpan...';
+      try {
+        const data = await apiFetch('saveBiaya', { items: items });
+        biayaData = data.items;
+        draftData = biayaData.map(r => ({ ...r }));
+        renderAdminRows();
+        renderPublicTable();
+        showMsg(panelSuccess, 'Perubahan tersimpan di server dan langsung terlihat oleh semua pengunjung.');
+      } catch (err) {
+        handleAuthError(err, panelError);
+      } finally {
+        saveBtn.disabled = false;
+        saveBtn.textContent = '💾 Simpan Perubahan';
+      }
     });
 
-    resetBtn.addEventListener('click', () => {
-      if (!confirm('Reset semua komponen biaya ke data bawaan (default)? Perubahan tersimpan akan hilang.')) return;
-      draftData = DEFAULT_DATA.map(r => ({ ...r }));
-      renderAdminRows();
+    resetBtn.addEventListener('click', async () => {
+      if (!confirm('Reset semua komponen biaya ke data bawaan (default) di server? Perubahan tersimpan akan hilang untuk semua pengunjung.')) return;
+      if (!isSessionValid()) {
+        showMsg(panelError, 'Sesi admin sudah berakhir. Silakan login kembali.');
+        closeOverlay(panelOverlay);
+        return;
+      }
       hideMsg(panelSuccess);
-      showMsg(panelError, 'Data direset di form ini. Klik "Simpan Perubahan" untuk menerapkannya.');
+      resetBtn.disabled = true;
+      try {
+        const data = await apiFetch('resetBiaya');
+        biayaData = data.items;
+        draftData = biayaData.map(r => ({ ...r }));
+        renderAdminRows();
+        renderPublicTable();
+        showMsg(panelSuccess, 'Data telah direset ke bawaan (default) di server.');
+      } catch (err) {
+        handleAuthError(err, panelError);
+      } finally {
+        resetBtn.disabled = false;
+      }
     });
 
     logoutBtn.addEventListener('click', () => {
@@ -1938,11 +2061,6 @@
       const next = $('admin-pw-new').value;
       const confirmPw = $('admin-pw-confirm').value;
 
-      const currentHash = await sha256Hex(current);
-      if (currentHash !== getAdminHash()) {
-        showMsg(pwError, 'Kata sandi saat ini salah.');
-        return;
-      }
       if (next.length < 8) {
         showMsg(pwError, 'Kata sandi baru minimal 8 karakter.');
         return;
@@ -1951,10 +2069,14 @@
         showMsg(pwError, 'Konfirmasi kata sandi baru tidak cocok.');
         return;
       }
-      const newHash = await sha256Hex(next);
-      localStorage.setItem(ADMIN_HASH_KEY, newHash);
-      showMsg(pwSuccess, 'Kata sandi berhasil diubah. Gunakan kata sandi baru saat login berikutnya.');
-      pwForm.reset();
+
+      try {
+        await apiFetch('changePassword', { currentPassword: current, newPassword: next });
+        showMsg(pwSuccess, 'Kata sandi berhasil diubah di server. Gunakan kata sandi baru saat login berikutnya.');
+        pwForm.reset();
+      } catch (err) {
+        handleAuthError(err, pwError);
+      }
     });
 
     /* ---------- tutup modal dengan tombol Escape ---------- */
@@ -1965,17 +2087,11 @@
       else if (panelOverlay.classList.contains('open')) closeOverlay(panelOverlay);
     });
 
-    // Perbarui aktivitas sesi saat admin berinteraksi di dalam panel
-    ['click', 'input'].forEach(evt => {
-      panelOverlay.addEventListener(evt, touchSession);
-      pwOverlay.addEventListener(evt, touchSession);
-    });
-
     /* ---------- inisialisasi ---------- */
-    loadData();
-    renderPublicTable();
+    loadPublicData();
   })();
 </script>
+
 
 </body>
 </html>
