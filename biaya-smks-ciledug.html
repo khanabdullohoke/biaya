@@ -1,1285 +1,1500 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SMKS Ciledug Al Musaddadiyah — Informasi Penerimaan Siswa Baru</title>
-  <meta name="description" content="Informasi Penerimaan Siswa Baru SMKS Ciledug Al-Musaddadiyah Garut TP 2026/2027"/>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,500;0,700;0,800;0,900;1,900&family=DM+Sans:wght@400;500;600&family=Amiri:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
-  <style>
-    :root {
-      --blue-deep:   #0b3d91;
-      --blue-mid:    #1565c0;
-      --blue-bright: #1e88e5;
-      --blue-light:  #42a5f5;
-      --blue-pale:   #e3f2fd;
-      --sky:         #bbdefb;
-      --cream:       #f5f9ff;
-      --white:       #ffffff;
-      --text-dark:   #0d1b3e;
-      --text-mid:    #2c4a7c;
-      --text-muted:  #607d9e;
-      --gold:        #ffb300;
-      --gold-light:  #ffd54f;
-      --red:         #e53935;
-      --border:      #c5daf5;
-      --shadow:      0 4px 24px rgba(21,101,192,.12);
-      --shadow-lg:   0 12px 48px rgba(21,101,192,.18);
-      --radius:      16px;
-      --radius-sm:   10px;
-      --tr:          .2s cubic-bezier(.4,0,.2,1);
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Biaya Pendidikan SMKS Ciledug Al Musaddadiyah TA 2025/2026</title>
+<meta name="description" content="Informasi lengkap biaya pendidikan SMKS Ciledug Al Musaddadiyah Garut TA 2025/2026 — rincian biaya, program beasiswa hingga 100%, dan kemudahan cicilan."/>
+<meta name="robots" content="index,follow"/>
+<meta property="og:title" content="Biaya Pendidikan SMKS Ciledug Al Musaddadiyah 2025/2026"/>
+<meta property="og:description" content="Transparansi biaya pendidikan lengkap, beasiswa, dan cicilan untuk calon siswa baru SMKS Ciledug Garut."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Persib Bandung Official Colors */
+    --deep-blue: #0D0FA8;        /* Persib royal blue deep */
+    --mid-blue: #1A1ECC;         /* Persib blue utama */
+    --blue-2: #2327E0;           /* blue medium */
+    --blue-3: #3B40F0;           /* blue vivid */
+    --blue-glow: #5C60FF;        /* blue glow */
+    --blue-light: #9B9EFF;       /* blue light tint */
+    --blue-pale: #D0D1FF;
+    --gold: #F5C800;             /* kuning bintang Persib */
+    --gold-bright: #FFD740;      /* kuning cerah */
+    --gold-pale: #FFF8CC;
+    --gold-glow: rgba(245,200,0,0.18);
+    --white: #FFFFFF;
+    --off-white: #F0F0FF;
+    --text-muted: #A8AAEE;
+    --border: rgba(245,200,0,0.30);
+    --border-blue: rgba(91,96,255,0.25);
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html { scroll-behavior: smooth; scroll-padding-top: 72px; }
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: linear-gradient(160deg, #0D0FA8 0%, #1A1ECC 60%, #0A0C90 100%);
+    color: var(--white);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+
+
+
+  /* ── NAV ── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 6vw;
+    background: rgba(13,15,168,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-decoration: none;
+  }
+
+  .nav-logo-ring {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    border: 2px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    background: var(--gold-glow);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 0.9rem;
+    color: var(--gold-bright);
+    letter-spacing: 0.03em;
+    flex-shrink: 0;
+  }
+
+  .nav-brand img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  .nav-name {
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
+  }
+
+  .nav-name span { color: var(--gold); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    font-family: var(--font-body);
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--gold-bright); }
+
+  /* Hamburger */
+  .nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    width: 34px; height: 34px;
+    flex-shrink: 0;
+  }
+  .nav-hamburger span {
+    display: block;
+    width: 22px; height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: transform .3s, opacity .3s;
+  }
+  .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+  .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Mobile drawer */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    top: 65px; left: 0; right: 0;
+    z-index: 99;
+    background: rgba(10,12,140,0.98);
+    backdrop-filter: blur(16px);
+    padding: 12px 6vw 20px;
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    gap: 4px;
+  }
+  .nav-drawer.open { display: flex; }
+  .nav-drawer a {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    padding: 10px 14px;
+    border-radius: 10px;
+    transition: all .2s;
+    letter-spacing: .04em;
+  }
+  .nav-drawer a:hover { color: var(--gold-bright); background: rgba(255,255,255,.05); }
+  .nav-drawer .nav-cta {
+    margin-top: 8px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue) !important;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 100px;
+  }
+
+  .nav-cta {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue) !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    font-weight: 700 !important;
+    font-size: 0.8rem !important;
+    transition: box-shadow 0.2s, transform 0.2s !important;
+  }
+
+  .nav-cta:hover {
+    box-shadow: 0 0 24px rgba(245,200,0,0.55) !important;
+    transform: translateY(-1px);
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    height: 75vh;
+    min-height: 480px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5rem 6vw 3rem;
+    overflow: hidden;
+  }
+
+  .hero::after {
+    content: '';
+    position: absolute;
+    width: 700px; height: 700px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(58,64,240,0.14) 0%, transparent 70%);
+    top: -200px; left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+  }
+
+  .glow-gold {
+    position: absolute;
+    width: 400px; height: 400px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(245,200,0,0.09) 0%, transparent 65%);
+    bottom: 80px; right: -100px;
+    pointer-events: none;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    padding: 0.4rem 1.1rem;
+    font-family: var(--font-display);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 1.8rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .eyebrow-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulse-gold 2s infinite;
+  }
+
+  @keyframes pulse-gold {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(0.7); }
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 6vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 1.2rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .accent {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-subtitle {
+    max-width: 600px;
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin: 0 auto 2.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ── SECTION COMMON ── */
+  section {
+    position: relative;
+    padding: 5rem 6vw;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+    padding: 0 1rem;
+  }
+
+  .section-kicker {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 0.9rem;
+    opacity: 0.9;
+  }
+
+  .section-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.9rem, 4.5vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: var(--white);
+  }
+
+  .section-desc {
+    max-width: 680px;
+    margin: 1.2rem auto 0;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  /* ── PRICE TABLE ── */
+  .price-container {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+
+  .price-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .toggle-btn {
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--border-blue);
+    background: rgba(255,255,255,0.03);
+    color: var(--text-muted);
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  .toggle-btn.active {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue);
+    border-color: var(--gold);
+    box-shadow: 0 0 20px rgba(245,200,0,0.45);
+  }
+
+  .price-table {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-blue);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .table-header {
+    display: grid;
+    grid-template-columns: 60px 1fr 140px 140px;
+    background: linear-gradient(135deg, rgba(245,200,0,0.12), rgba(35,39,224,0.12));
+    border-bottom: 1px solid var(--border-blue);
+    padding: 1.2rem 1.5rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+  }
+
+  .table-row {
+    display: grid;
+    grid-template-columns: 60px 1fr 140px 140px;
+    padding: 1.2rem 1.5rem;
+    border-bottom: 1px solid rgba(99,166,255,0.1);
+    transition: background 0.2s;
+  }
+
+  .table-row:hover {
+    background: rgba(255,255,255,0.03);
+  }
+
+  .table-row:last-child {
+    border-bottom: none;
+  }
+
+  .row-num {
+    font-weight: 600;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+  }
+
+  .row-label {
+    font-weight: 500;
+    color: var(--white);
+    font-size: 0.95rem;
+  }
+
+  .row-price {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--blue-light);
+    text-align: right;
+  }
+
+  .table-total {
+    display: grid;
+    grid-template-columns: 60px 1fr 140px 140px;
+    padding: 1.5rem 1.5rem;
+    background: linear-gradient(135deg, rgba(58,64,240,0.14), rgba(245,200,0,0.08));
+    border-top: 2px solid var(--gold);
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.05rem;
+  }
+
+  .total-label {
+    color: var(--gold-bright);
+  }
+
+  .total-price {
+    color: var(--gold-bright);
+    text-align: right;
+    font-size: 1.15rem;
+  }
+
+  /* ── INFO BOXES ── */
+  .info-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+  }
+
+  .info-box {
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    border: 1px solid var(--border-blue);
+    border-radius: 16px;
+    padding: 1.8rem;
+  }
+
+  .info-icon {
+    width: 48px;
+    height: 48px;
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .info-title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+
+  .info-desc {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+  }
+
+  .info-highlight {
+    color: var(--gold-bright);
+    font-weight: 600;
+  }
+
+  /* ── DISCOUNT SECTION ── */
+  .discount-section {
+    background: linear-gradient(135deg, rgba(58,64,240,0.14), rgba(35,39,224,0.05));
+    border: 1px solid var(--border-blue);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .discount-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--gold-glow);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-bright);
+    margin-bottom: 1.5rem;
+  }
+
+  .discount-title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin-bottom: 1rem;
+  }
+
+  .discount-desc {
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+  }
+
+  .discount-list {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    list-style: none;
+  }
+
+  .discount-list li {
+    display: flex;
+    align-items: start;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--white);
+  }
+
+  .discount-list li::before {
+    content: '✓';
+    color: var(--gold-bright);
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  /* ── CTA SECTION ── */
+  .cta-section {
+    padding: 5rem 6vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cta-box {
+    background: linear-gradient(135deg, rgba(245,200,0,0.12), rgba(35,39,224,0.08));
+    border: 1px solid var(--border-blue);
+    border-radius: 24px;
+    padding: 3.5rem 3rem;
+    max-width: 800px;
+    text-align: center;
+  }
+
+  .cta-title {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .gold-text {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cta-sub {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary, .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.9rem 2rem;
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue);
+    box-shadow: 0 4px 20px rgba(245,200,0,0.35);
+  }
+
+  .btn-primary:hover {
+    box-shadow: 0 6px 30px rgba(245,200,0,0.55);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: rgba(255,255,255,0.05);
+    color: var(--white);
+    border: 2px solid var(--border-blue);
+  }
+
+  .btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: var(--gold);
+    color: var(--gold-bright);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 2.5rem 6vw;
+    background: rgba(13,15,168,0.35);
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .footer-brand {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+  }
+
+  .footer-brand span { color: var(--gold-bright); }
+
+  .footer-copy {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+  }
+
+  /* ── ANIMATIONS ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s cubic-bezier(.22,1,.36,1), transform 0.6s cubic-bezier(.22,1,.36,1);
+  }
+
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── GENDER COLUMN TOGGLE (semua ukuran layar) ── */
+  /* Default: tampilkan kedua kolom */
+  .col-laki   { display: block; }
+  .col-perempuan { display: block; }
+
+  /* Saat mode single-column aktif (diterapkan via JS di layar sempit) */
+  body.show-laki .col-perempuan     { display: none; }
+  body.show-perempuan .col-laki    { display: none; }
+
+  /* Di layar sempit, aktifkan single-column mode secara default */
+  @media (max-width: 540px) {
+    body:not(.show-perempuan) .col-perempuan { display: none; }
+    body.show-perempuan .col-laki            { display: none; }
+
+    .table-header, .table-row, .table-total {
+      grid-template-columns: 36px 1fr 120px !important;
+    }
+  }
+
+  /* ── ADMIN: trigger link ── */
+  .admin-trigger {
+    background: none;
+    border: none;
+    color: var(--text-muted);
+    opacity: 0.45;
+    font-size: 0.72rem;
+    font-family: var(--font-body);
+    cursor: pointer;
+    text-decoration: underline;
+    letter-spacing: 0.02em;
+    padding: 4px 6px;
+    transition: opacity 0.2s, color 0.2s;
+  }
+  .admin-trigger:hover { opacity: 0.9; color: var(--gold-bright); }
+
+  /* ── ADMIN: modal overlay ── */
+  .admin-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(6,7,60,0.72);
+    backdrop-filter: blur(6px);
+    align-items: flex-start;
+    justify-content: center;
+    padding: 6vh 4vw;
+    overflow-y: auto;
+  }
+  .admin-overlay.open { display: flex; }
+
+  .admin-modal {
+    background: linear-gradient(160deg, #12149c 0%, #0d0fa8 100%);
+    border: 1px solid var(--border-blue);
+    border-radius: 20px;
+    width: 100%;
+    max-width: 460px;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 20px 60px rgba(0,0,4,0.5);
+    position: relative;
+  }
+
+  .admin-modal.admin-modal-wide { max-width: 760px; }
+
+  .admin-modal h3 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+    color: var(--white);
+  }
+
+  .admin-modal-sub {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 1.4rem;
+    line-height: 1.5;
+  }
+
+  .admin-close {
+    position: absolute;
+    top: 1.1rem; right: 1.1rem;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--border-blue);
+    color: var(--white);
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1rem;
+    line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .admin-close:hover { border-color: var(--gold); color: var(--gold-bright); }
+
+  .admin-field { margin-bottom: 1rem; }
+  .admin-field label {
+    display: block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 0.4rem;
+    letter-spacing: 0.02em;
+  }
+  .admin-field input {
+    width: 100%;
+    padding: 0.7rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid var(--border-blue);
+    background: rgba(255,255,255,0.06);
+    color: var(--white);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  .admin-field input:focus {
+    border-color: var(--gold);
+    background: rgba(255,255,255,0.09);
+  }
+  .admin-field input::placeholder { color: rgba(168,170,238,0.5); }
+
+  .admin-error {
+    display: none;
+    background: rgba(255,70,70,0.12);
+    border: 1px solid rgba(255,70,70,0.4);
+    color: #ffb0b0;
+    font-size: 0.8rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .admin-error.show { display: block; }
+
+  .admin-success {
+    display: none;
+    background: rgba(70,220,140,0.12);
+    border: 1px solid rgba(70,220,140,0.4);
+    color: #a8f0cd;
+    font-size: 0.8rem;
+    padding: 0.65rem 0.9rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+  }
+  .admin-success.show { display: block; }
+
+  .admin-btn-row { display: flex; gap: 0.7rem; margin-top: 1.4rem; flex-wrap: wrap; }
+
+  .admin-btn {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.7rem 1rem;
+    border-radius: 100px;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.82rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-align: center;
+  }
+  .admin-btn-primary {
+    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    color: var(--deep-blue);
+  }
+  .admin-btn-primary:hover { box-shadow: 0 4px 20px rgba(245,200,0,0.4); }
+  .admin-btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  .admin-btn-ghost {
+    background: rgba(255,255,255,0.06);
+    color: var(--white);
+    border: 1px solid var(--border-blue);
+  }
+  .admin-btn-ghost:hover { border-color: var(--gold); color: var(--gold-bright); }
+  .admin-btn-danger {
+    background: rgba(255,70,70,0.14);
+    color: #ffb0b0;
+    border: 1px solid rgba(255,70,70,0.4);
+  }
+  .admin-btn-danger:hover { background: rgba(255,70,70,0.25); }
+
+  .admin-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-blue);
+  }
+
+  .admin-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(70,220,140,0.14);
+    border: 1px solid rgba(70,220,140,0.35);
+    color: #a8f0cd;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.35rem 0.8rem;
+    border-radius: 100px;
+    letter-spacing: 0.03em;
+  }
+
+  .admin-rows { display: flex; flex-direction: column; gap: 0.7rem; max-height: 44vh; overflow-y: auto; padding-right: 4px; margin-bottom: 1rem; }
+
+  .admin-row-card {
+    display: grid;
+    grid-template-columns: 28px 1.6fr 1fr 1fr 34px;
+    gap: 0.5rem;
+    align-items: center;
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-blue);
+    border-radius: 12px;
+    padding: 0.6rem;
+  }
+
+  .admin-row-card .row-idx {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+  }
+
+  .admin-row-card input {
+    width: 100%;
+    padding: 0.5rem 0.6rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-blue);
+    background: rgba(255,255,255,0.05);
+    color: var(--white);
+    font-size: 0.8rem;
+    outline: none;
+  }
+  .admin-row-card input:focus { border-color: var(--gold); }
+  .admin-row-card input.invalid { border-color: #ff6b6b; background: rgba(255,70,70,0.08); }
+
+  .admin-row-delete {
+    background: rgba(255,70,70,0.14);
+    border: 1px solid rgba(255,70,70,0.4);
+    color: #ffb0b0;
+    border-radius: 8px;
+    width: 34px; height: 34px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  .admin-row-delete:hover { background: rgba(255,70,70,0.3); }
+
+  .admin-total-preview {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    background: rgba(245,200,0,0.08);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--gold-bright);
+    margin-bottom: 1rem;
+  }
+
+  .admin-lockout {
+    font-size: 0.78rem;
+    color: #ffb0b0;
+    margin-top: 0.6rem;
+  }
+
+  .admin-note {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    opacity: 0.8;
+    line-height: 1.6;
+    margin-top: 1.2rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border-blue);
+  }
+
+  @media (max-width: 560px) {
+    .admin-row-card {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+    .admin-row-card .row-idx { display: none; }
+    .admin-row-delete { width: 100%; height: 32px; }
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav {
+      padding: 1rem 5vw;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text-dark);
-      overflow-x: hidden;
-      line-height: 1.6;
-    }
-    h1,h2,h3,h4,h5,h6 { font-family: 'Plus Jakarta Sans', sans-serif; line-height: 1.15; }
-    a { text-decoration: none; color: inherit; }
-
-    /* ── HEADER ── */
-    header {
-      background: linear-gradient(140deg,#061e5c 0%,#0b3d91 40%,#1565c0 72%,#1e88e5 100%);
-      position: relative;
-      overflow: hidden;
-    }
-    header::before {
-      content:'';position:absolute;inset:0;
-      background-image:radial-gradient(rgba(255,255,255,.04) 1px,transparent 1px);
-      background-size:30px 30px;pointer-events:none;
-    }
-    header::after {
-      content:'';position:absolute;inset:0;
-      background:
-        radial-gradient(ellipse 60% 80% at 80% 20%,rgba(255,179,0,.12) 0%,transparent 60%),
-        radial-gradient(ellipse 40% 60% at 10% 80%,rgba(255,255,255,.07) 0%,transparent 50%);
-      pointer-events:none;
+    .nav-links {
+      display: none;
     }
 
-    .header-inner {
-      position: relative;
-      z-index: 2;
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 52px 32px 44px;
-      text-align: center;
-    }
-
-    /* ── LOGO FIX: tampil penuh tanpa terpotong ── */
-    .school-emblem {
-      /* Wrapper TIDAK memotong logo — hanya memberi glow ring */
-      position: relative;
-      width: 120px;
-      height: 120px;
-      margin: 0 auto 24px;
+    .nav-hamburger {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      /* BUG FIX: drop-shadow tidak mendukung nilai spread (4 angka) seperti box-shadow,
-         sehingga ring emas sebelumnya tidak pernah muncul di browser manapun.
-         Ring sekarang dibuat lewat ::before (di luar area gambar, tidak memotong logo). */
-      filter: drop-shadow(0 8px 24px rgba(0,0,0,.5));
-      animation: emblemPop .7s cubic-bezier(.34,1.56,.64,1) both;
-    }
-    .school-emblem::before {
-      content: '';
-      position: absolute;
-      inset: -6px;
-      border-radius: 50%;
-      border: 4px solid rgba(255,179,0,.55);
-      box-shadow: 0 0 0 2px rgba(255,255,255,.08), 0 0 18px rgba(255,179,0,.35);
-      pointer-events: none;
-    }
-    .school-emblem img {
-      /* gambar tampil 100% natural, biarkan PNG transparan terlihat utuh */
-      position: relative;
-      z-index: 1;
-      width: 120px;
-      height: 120px;
-      object-fit: contain;
-      /* tidak ada border-radius agar bentuk logo asli terjaga */
     }
 
-    @keyframes emblemPop {
-      from { transform: scale(.5); opacity: 0; }
-      to   { transform: scale(1);  opacity: 1; }
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(14px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .hero {
+      padding: 4rem 5vw 2rem;
+      height: auto;
+      min-height: 60vh;
     }
 
-    .header-bismillah {
-      font-family: 'Amiri', serif;
-      font-size: 17px;
-      color: var(--gold-light);
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      opacity: .92;
-      animation: fadeUp .6s .1s both;
-    }
-    .header-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: clamp(22px,4vw,38px);
-      font-weight: 900;
-      color: #fff;
-      letter-spacing: -.02em;
-      line-height: 1.2;
-      margin-bottom: 8px;
-      animation: fadeUp .6s .2s both;
-    }
-    .header-subtitle {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      color: rgba(255,255,255,.65);
-      font-weight: 500;
-      margin-bottom: 22px;
-      animation: fadeUp .6s .3s both;
-    }
-    .gold-divider {
-      width: 80px; height: 3px;
-      background: linear-gradient(90deg,transparent,var(--gold),transparent);
-      margin: 0 auto 20px;
-      animation: fadeUp .6s .4s both;
-    }
-    .header-badges {
-      display: flex; gap: 10px;
-      justify-content: center; flex-wrap: wrap;
-      animation: fadeUp .6s .5s both;
-    }
-    .header-badge {
-      background: rgba(255,255,255,.1);
-      border: 1px solid rgba(255,255,255,.2);
-      color: rgba(255,255,255,.9);
-      padding: 5px 14px; border-radius: 50px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12px; font-weight: 600;
+    section {
+      padding: 3rem 5vw;
     }
 
-    /* ── NAV TABS (desktop sticky top) ── */
-    .nav-tabs {
-      background: rgba(11,61,145,.97);
-      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(66,165,245,.15);
-      position: sticky; top: 0; z-index: 200;
-      box-shadow: 0 4px 20px rgba(11,61,145,.3);
-    }
-    .nav-tabs-inner {
-      max-width: 960px; margin: 0 auto;
-      display: flex; overflow-x: auto; scrollbar-width: none;
-    }
-    .nav-tabs-inner::-webkit-scrollbar { display: none; }
-    .nav-tab {
-      padding: 14px 20px;
-      color: rgba(255,255,255,.6);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px; font-weight: 600;
-      white-space: nowrap;
-      border-bottom: 3px solid transparent;
-      transition: all var(--tr);
-      text-decoration: none;
-      flex: 1; text-align: center;
-    }
-    .nav-tab:hover { color: var(--gold-light); }
-    .nav-tab.active {
-      color: var(--gold);
-      border-bottom-color: var(--gold);
-      background: rgba(255,179,0,.07);
+    .price-table {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
     }
 
-    /* ── MOBILE BOTTOM NAV ── */
-    .mobile-nav {
+    /* 541-768px: 4 kolom masih muat tapi lebih compact */
+    .table-header, .table-row, .table-total {
+      grid-template-columns: 36px 1fr 110px 110px;
+      font-size: 0.78rem;
+      padding: 0.85rem 0.9rem;
+    }
+
+    .row-label {
+      font-size: 0.85rem;
+    }
+
+    .row-price, .total-price {
+      font-size: 0.82rem;
+    }
+
+    .toggle-btn {
+      padding: 0.65rem 1.2rem;
+      font-size: 0.82rem;
+    }
+
+    .price-toggle {
+      gap: 0.6rem;
+    }
+
+    /* Header label kolom harga di 541-768 */
+    .col-header-price {
       display: none;
-      position: fixed; bottom: 0; left: 0; right: 0; z-index: 300;
-      background: rgba(11,61,145,.97);
-      backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-      border-top: 1px solid rgba(66,165,245,.2);
-      padding: 6px 8px calc(6px + env(safe-area-inset-bottom, 0px));
-    }
-    .mobile-nav-inner {
-      display: flex; align-items: center; justify-content: space-around;
-    }
-    .mobile-nav-btn {
-      flex: 1;
-      display: flex; flex-direction: column; align-items: center; gap: 3px;
-      background: none; border: none;
-      padding: 8px 4px; border-radius: 10px;
-      color: rgba(255,255,255,.5);
-      text-decoration: none;
-      transition: all var(--tr);
-      cursor: pointer;
-    }
-    .mobile-nav-btn .mn-icon { font-size: 18px; line-height: 1; }
-    .mobile-nav-btn .mn-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 9px; font-weight: 600;
-      letter-spacing: .02em; white-space: nowrap;
-    }
-    .mobile-nav-btn.active {
-      background: rgba(255,255,255,.1);
-      color: var(--gold);
-    }
-    .mobile-nav-btn:hover { color: rgba(255,255,255,.85); }
-
-    /* ── MAIN ── */
-    main { max-width: 960px; margin: 0 auto; padding: 44px 20px 80px; }
-
-    /* ── SECTION ── */
-    .section { margin-bottom: 60px; animation: fadeUp .5s both; }
-    .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 26px; }
-    .section-icon {
-      width: 50px; height: 50px;
-      background: linear-gradient(135deg,var(--blue-mid),var(--blue-deep));
-      border-radius: 14px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 23px; flex-shrink: 0;
-      box-shadow: 0 4px 16px rgba(21,101,192,.3);
-    }
-    .section-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 21px; font-weight: 800; color: var(--blue-deep);
-    }
-    .section-desc {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px; color: var(--text-muted); margin-top: 3px;
     }
 
-    /* ── CARD ── */
-    .card {
-      background: var(--white);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .card-header-bar {
-      background: linear-gradient(90deg,var(--blue-deep),var(--blue-mid));
-      padding: 13px 22px; color: var(--white);
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px; font-weight: 700;
-      display: flex; align-items: center; gap: 8px;
+    .info-boxes {
+      grid-template-columns: 1fr;
     }
 
-    /* ── INFO GRID ── */
-    .info-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-      gap: 16px;
-    }
-    .info-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 22px 18px; text-align: center;
-      box-shadow: var(--shadow);
-      transition: transform var(--tr), box-shadow var(--tr);
-    }
-    .info-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-    .info-card-icon { font-size: 30px; margin-bottom: 10px; }
-    .info-card-label {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 10.5px; color: var(--text-muted); font-weight: 600;
-      text-transform: uppercase; letter-spacing: .8px;
-    }
-    .info-card-value {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 17px; font-weight: 800; color: var(--blue-deep); margin-top: 5px;
-    }
-    .info-card-sub {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12px; color: var(--text-muted); margin-top: 3px;
+    .discount-section {
+      padding: 2rem 1.5rem;
     }
 
-    /* ── REQ LIST ── */
-    .req-list { padding: 4px 0; }
-    .req-item {
-      display: flex; align-items: flex-start; gap: 14px;
-      padding: 14px 22px;
-      border-bottom: 1px solid var(--blue-pale);
-      transition: background var(--tr);
-    }
-    .req-item:last-child { border-bottom: none; }
-    .req-item:hover { background: var(--blue-pale); }
-    .req-num {
-      width: 28px; height: 28px;
-      background: var(--blue-mid); color: var(--white);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 12px; font-weight: 800; flex-shrink: 0; margin-top: 1px;
-    }
-    .req-text { font-family: 'DM Sans', sans-serif; font-size: 14px; line-height: 1.6; color: var(--text-dark); }
-    .req-note { font-family: 'DM Sans', sans-serif; font-size: 12px; color: var(--text-muted); margin-top: 3px; }
-
-    /* ── RULE LIST ── */
-    .rule-group { margin-bottom: 4px; }
-    .rule-group-title {
-      background: var(--blue-pale);
-      border-left: 4px solid var(--blue-mid);
-      padding: 11px 22px;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px; font-weight: 700; color: var(--blue-deep); letter-spacing: .2px;
-    }
-    .rule-item {
-      display: flex; gap: 12px;
-      padding: 12px 22px;
-      border-bottom: 1px solid #e8f0fa;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13.5px; line-height: 1.6;
-      transition: background var(--tr);
-    }
-    .rule-item:hover { background: var(--blue-pale); }
-    .rule-item:last-child { border-bottom: none; }
-    .rule-dot {
-      width: 8px; height: 8px;
-      background: var(--blue-light);
-      border-radius: 50%; flex-shrink: 0; margin-top: 8px;
-    }
-    .rule-dot.red  { background: var(--red); }
-    .rule-dot.gold { background: var(--gold); }
-
-    /* ── ALERT ── */
-    .alert {
-      border-radius: var(--radius-sm);
-      padding: 16px 20px;
-      display: flex; gap: 12px; align-items: flex-start;
-      margin-top: 16px;
-    }
-    .alert-warning { background: #fffbea; border: 1px solid #f6d860; }
-    .alert-info    { background: var(--blue-pale); border: 1px solid var(--border); }
-    .alert-icon    { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
-    .alert-text    { font-family: 'DM Sans', sans-serif; font-size: 13px; line-height: 1.6; color: var(--text-dark); }
-    .alert-text strong { color: var(--blue-deep); font-family: 'Plus Jakarta Sans', sans-serif; }
-
-    /* ── STEPS ── */
-    .steps { display: flex; flex-direction: column; }
-    .step {
-      display: flex; gap: 16px;
-      padding: 18px 22px;
-      border-bottom: 1px solid var(--blue-pale);
-    }
-    .step:last-child { border-bottom: none; }
-    .step-num {
-      width: 38px; height: 38px;
-      background: linear-gradient(135deg,var(--blue-mid),var(--blue-deep));
-      color: var(--white); border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 15px; font-weight: 900; flex-shrink: 0;
-      box-shadow: 0 3px 10px rgba(21,101,192,.3);
-    }
-    .step-content { flex: 1; padding-top: 6px; }
-    .step-title {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px; font-weight: 700; color: var(--blue-deep); margin-bottom: 4px;
-    }
-    .step-desc {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px; color: var(--text-muted); line-height: 1.6;
+    .cta-box {
+      padding: 2.5rem 2rem;
     }
 
-    /* ── FOOTER ── */
-    footer {
-      background: linear-gradient(135deg,#061e5c,#0b3d91);
-      color: rgba(255,255,255,.75);
-      text-align: center;
-      padding: 36px 24px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px; line-height: 1.9;
-      border-top: 1px solid rgba(66,165,245,.2);
-    }
-    footer .footer-ayat {
-      font-family: 'Amiri', serif;
-      font-size: 20px; color: var(--gold-light); margin-bottom: 6px;
-    }
-    footer .footer-terjemah {
-      font-size: 12px; color: rgba(255,255,255,.45);
-      margin-bottom: 16px; font-style: italic;
-    }
-    footer strong { color: var(--gold); font-family: 'Plus Jakarta Sans', sans-serif; }
-
-    /* ── PRINT ── */
-    @media print {
-      .nav-tabs, .mobile-nav, footer { display: none; }
-      header { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-      .card { break-inside: avoid; }
-      main { padding: 20px; }
+    .cta-buttons {
+      flex-direction: column;
     }
 
-    /* ── TABLET ── */
-    @media (max-width: 768px) {
-      .nav-tab { padding: 12px 14px; font-size: 12px; }
-      main { padding: 32px 16px 80px; }
-      .section-title { font-size: 19px; }
-      .info-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    /* ── MOBILE ── */
-    @media (max-width: 600px) {
-      /* Sembunyikan nav top, tampilkan bottom nav */
-      .nav-tabs { display: none; }
-      .mobile-nav { display: block; }
-
-      /* Konten utama beri ruang untuk bottom nav */
-      main { padding: 24px 14px 90px; }
-
-      /* Header */
-      .header-inner { padding: 32px 16px 28px; }
-      .school-emblem, .school-emblem img { width: 88px; height: 88px; }
-      .header-bismillah { font-size: 14px; }
-      .header-title { font-size: clamp(18px,5.5vw,26px); }
-      .header-subtitle { font-size: 12.5px; }
-      .header-badge { font-size: 11px; padding: 4px 10px; }
-
-      /* Section */
-      .section { margin-bottom: 40px; }
-      .section-header { gap: 12px; margin-bottom: 18px; }
-      .section-icon { width: 42px; height: 42px; font-size: 19px; border-radius: 11px; }
-      .section-title { font-size: 17px; }
-      .section-desc { font-size: 12px; }
-
-      /* Cards */
-      .card-header-bar { padding: 11px 16px; font-size: 13px; }
-      .req-item { padding: 12px 16px; gap: 12px; }
-      .req-text { font-size: 13px; }
-      .req-note { font-size: 11px; }
-      .req-num { width: 24px; height: 24px; font-size: 11px; }
-
-      .rule-group-title { padding: 10px 16px; font-size: 12.5px; }
-      .rule-item { padding: 10px 16px; font-size: 13px; gap: 10px; }
-
-      /* Info grid: 1 kolom di HP kecil */
-      .info-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-      .info-card { padding: 16px 12px; }
-      .info-card-icon { font-size: 24px; margin-bottom: 7px; }
-      .info-card-value { font-size: 14px; }
-      .info-card-label { font-size: 9.5px; }
-      .info-card-sub { font-size: 11px; }
-
-      /* Steps */
-      .step { padding: 14px 16px; gap: 12px; }
-      .step-num { width: 32px; height: 32px; font-size: 13px; }
-      .step-title { font-size: 13px; }
-      .step-desc { font-size: 12.5px; }
-
-      /* Alert */
-      .alert { padding: 13px 14px; gap: 10px; }
-      .alert-text { font-size: 12.5px; }
-
-      /* Footer */
-      footer { padding: 28px 16px; font-size: 12px; }
-      footer .footer-ayat { font-size: 17px; }
-    }
-
-    @media (max-width: 380px) {
-      .info-grid { grid-template-columns: 1fr; }
-      .header-badges { gap: 6px; }
-    }
-
-    /* ══════════ ADMIN MODE ══════════ */
-    .admin-fab {
-      position: fixed;
-      right: 20px;
-      bottom: 84px;
-      z-index: 400;
-      width: 52px; height: 52px;
-      border-radius: 50%;
-      background: linear-gradient(135deg,var(--blue-mid),var(--blue-deep));
-      color: #fff;
-      border: none;
-      font-size: 22px;
-      display: flex; align-items: center; justify-content: center;
-      cursor: pointer;
-      box-shadow: 0 6px 20px rgba(11,61,145,.4);
-      transition: transform var(--tr), box-shadow var(--tr), bottom var(--tr);
-    }
-    .admin-fab:hover { transform: translateY(-2px) scale(1.05); box-shadow: 0 10px 26px rgba(11,61,145,.5); }
-    .admin-fab.is-admin { background: linear-gradient(135deg,var(--gold),#c9860a); }
-    body.admin-mode .admin-fab { bottom: 74px; }
-    @media (max-width: 600px) {
-      .admin-fab { bottom: 96px; right: 14px; width: 46px; height: 46px; font-size: 19px; }
-      body.admin-mode .admin-fab { bottom: 128px; }
-    }
-
-    .admin-overlay {
-      position: fixed; inset: 0; z-index: 500;
-      background: rgba(6,20,50,.55);
-      backdrop-filter: blur(3px);
-      display: none;
-      align-items: center; justify-content: center;
-      padding: 20px;
-    }
-    .admin-overlay.open { display: flex; }
-    .admin-modal {
-      background: #fff;
-      border-radius: var(--radius);
-      max-width: 380px; width: 100%;
-      padding: 28px 24px;
-      box-shadow: var(--shadow-lg);
-      animation: fadeUp .25s both;
-      text-align: center;
-    }
-    .admin-modal h3 {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 17px; color: var(--blue-deep); margin-bottom: 6px;
-    }
-    .admin-modal p { font-size: 12.5px; color: var(--text-muted); margin-bottom: 18px; line-height: 1.5; }
-    .admin-modal input[type="password"] {
+    .btn-primary, .btn-secondary {
       width: 100%;
-      padding: 12px 14px;
-      border: 1.5px solid var(--border);
-      border-radius: var(--radius-sm);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 14px;
-      margin-bottom: 12px;
-      outline: none;
-      transition: border-color var(--tr);
-    }
-    .admin-modal input[type="password"]:focus { border-color: var(--blue-mid); }
-    .admin-modal input[type="password"]:disabled { background: #f2f4f7; color: var(--text-muted); }
-    .admin-modal .admin-error {
-      color: var(--red); font-size: 12px; margin-bottom: 10px; display: none; font-weight: 600;
-    }
-    .admin-modal .admin-lock-notice {
-      color: #b45309; background: #fff8ee; border: 1px solid #f5a623;
-      border-radius: var(--radius-sm); padding: 10px; font-size: 12px; font-weight: 600;
-      margin-bottom: 12px; display: none;
-    }
-    .admin-btn-row { display: flex; gap: 10px; }
-    .btn {
-      flex: 1;
-      padding: 11px 16px;
-      border-radius: var(--radius-sm);
-      border: none;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 13px; font-weight: 700;
-      cursor: pointer;
-      transition: transform var(--tr), box-shadow var(--tr), opacity var(--tr);
-    }
-    .btn:hover { transform: translateY(-1px); }
-    .btn:active { transform: translateY(0); }
-    .btn-primary { background: linear-gradient(90deg,var(--blue-mid),var(--blue-deep)); color: #fff; box-shadow: 0 4px 14px rgba(21,101,192,.3); }
-    .btn-ghost { background: var(--blue-pale); color: var(--blue-deep); }
-    .btn-danger { background: #fdecea; color: var(--red); }
-    .btn-gold { background: linear-gradient(90deg,var(--gold),#c9860a); color: var(--blue-deep); }
-    .btn-sm { padding: 7px 12px; font-size: 12px; flex: none; }
-    .btn:disabled { opacity: .5; cursor: not-allowed; transform: none; }
-
-    /* Bar admin global — fixed di bawah agar aksi selalu terjangkau di section manapun */
-    .admin-bar {
-      display: none;
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
-      z-index: 350;
-      align-items: center; justify-content: center; flex-wrap: wrap; gap: 10px;
-      background: linear-gradient(90deg,#7a5900,#c9a008);
-      color: #fff;
-      padding: 10px 18px calc(10px + env(safe-area-inset-bottom, 0px));
-      box-shadow: 0 -6px 20px rgba(0,0,0,.2);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 12.5px; font-weight: 600;
-    }
-    .admin-bar.show { display: flex; }
-    .admin-bar-label { white-space: nowrap; }
-    .admin-bar-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
-    @media (max-width: 600px) {
-      .admin-bar { bottom: 62px; font-size: 11.5px; padding: 8px 10px; }
+      justify-content: center;
     }
 
-    .section-admin-actions {
-      display: none;
-      padding: 14px 22px;
-      border-top: 1px dashed var(--border);
-      gap: 8px; flex-wrap: wrap;
+    footer {
+      flex-direction: column;
+      text-align: center;
     }
-    body.admin-mode .section-admin-actions { display: flex; }
-
-    .editable-field {
-      border: 1.5px dashed transparent;
-      border-radius: 6px;
-      padding: 2px 4px;
-      transition: border-color var(--tr), background var(--tr);
-      cursor: text;
-      outline: none;
-    }
-    body.admin-mode .editable-field {
-      border-color: rgba(21,101,192,.35);
-      background: rgba(66,165,245,.06);
-    }
-    body.admin-mode .editable-field:focus {
-      border-color: var(--blue-mid);
-      background: var(--blue-pale);
-    }
-
-    .req-item.admin-editing { position: relative; padding-right: 46px; }
-    .admin-del-btn {
-      display: none;
-      position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
-      width: 26px; height: 26px; border-radius: 50%;
-      background: #fdecea; color: var(--red); border: none;
-      font-size: 14px; line-height: 1; cursor: pointer;
-      align-items: center; justify-content: center;
-    }
-    body.admin-mode .admin-del-btn { display: flex; }
-
-    .admin-toast {
-      position: fixed;
-      left: 50%; bottom: 24px;
-      transform: translate(-50%, 20px);
-      background: var(--blue-deep);
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 50px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13px; font-weight: 600;
-      box-shadow: var(--shadow-lg);
-      z-index: 600;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity .25s, transform .25s;
-    }
-    .admin-toast.show { opacity: 1; transform: translate(-50%, 0); pointer-events: auto; }
-
-    /* ── FAQ ── */
-    .faq-list { padding: 6px 0; }
-    .faq-item {
-      border-bottom: 1px solid var(--blue-pale);
-      position: relative;
-    }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-question {
-      display: flex; align-items: center; justify-content: space-between; gap: 12px;
-      padding: 16px 22px;
-      cursor: pointer;
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      font-size: 14px; font-weight: 700; color: var(--blue-deep);
-      user-select: none;
-    }
-    .faq-question .faq-q-text { flex: 1; }
-    .faq-toggle-icon {
-      flex-shrink: 0;
-      width: 22px; height: 22px;
-      display: flex; align-items: center; justify-content: center;
-      color: var(--blue-mid);
-      font-size: 16px;
-      transition: transform var(--tr);
-    }
-    .faq-item.open .faq-toggle-icon { transform: rotate(45deg); }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s ease, padding var(--tr);
-      padding: 0 22px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 13.5px; line-height: 1.7; color: var(--text-mid);
-    }
-    .faq-item.open .faq-answer { padding: 0 22px 18px; }
-    body.admin-mode .faq-question { cursor: default; }
-    body.admin-mode .faq-item { padding-right: 40px; }
-
-    @media (max-width: 380px) {
-      .info-grid { grid-template-columns: 1fr; }
-      .header-badges { gap: 6px; }
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
 
-<!-- ══════════ HEADER ══════════ -->
-<header>
-  <div class="header-inner">
-
-    <!-- Logo: wrapper tanpa overflow:hidden agar logo PNG tidak terpotong -->
-    <div class="school-emblem">
-      <img
-        src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s320/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png"
-        alt="Logo SMKS Ciledug Al Musaddadiyah"
-      />
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiD-8YPFS6i86EyZZNDUhwuam5ro_mtc9So2muvB7EDWz1Zp6rarLubvVS3vfVVoto_S6SaHlIPPnmNaddUugGUztWkJYhDwwT8CU1BcUuq9TNyxnHKa6B44iDBx6LjR1-z3r7_C34jviaWeOYgk4bNJHsziPV4KR5mQjY69HVhyphenhyphenR3STD4xp-b46x_HeR4/s320/An8Em6pLCtVUNFZTK-rgdQG9pKiDxE1AR7m_1QO_5slD3C5qFXYq7S9suI1ztpViB_aUnbOGE2-Y71AU9SF3GjQzZ09xbw5aat-JT_7ptJ4VcfdGeJ73DWbHD9IDtVHa_16MjCj09HJ4eGBvZMo-removebg-preview.png" width="36" height="36" alt="Logo SMKS Ciledug" fetchpriority="high">
+    <div class="nav-name">
+      SMKS Ciledug<br>
+      <span>Al Musaddadiyah</span>
     </div>
-
-    <div class="header-bismillah">بسم الله الرحمن الرحيم</div>
-    <h1 class="header-title">SMKS Ciledug Al Musaddadiyah</h1>
-    <p class="header-subtitle">Jl. Mayor Syamsu No. 02 Jayaraga, Tarogong Kidul, Garut — Terakreditasi A</p>
-    <div class="gold-divider"></div>
-    <div class="header-badges">
-      <span class="header-badge">🎓 Penerimaan Siswa Baru</span>
-      <span class="header-badge">📋 Persyaratan &amp; Tata Tertib</span>
-      <span class="header-badge">☪️ Berbasis Pesantren</span>
-    </div>
-  </div>
-</header>
-
-<!-- ══════════ NAV TABS ══════════ -->
-<nav class="nav-tabs">
-  <div class="nav-tabs-inner">
-    <a href="#info"        class="nav-tab active">📌 Info Umum</a>
-    <a href="#persyaratan" class="nav-tab">📄 Persyaratan</a>
-    <a href="#alur"        class="nav-tab">🔄 Alur Daftar</a>
-    <a href="#tatatertib"  class="nav-tab">📜 Tata Tertib</a>
-    <a href="#sanksi"      class="nav-tab">⚠️ Sanksi</a>
-    <a href="#faq"         class="nav-tab">❓ FAQ</a>
-  </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#biaya">Biaya</a></li>
+    <li><a href="#diskon">Diskon</a></li>
+    <li><a href="#beasiswa">Beasiswa</a></li>
+    <li><a href="#daftar" class="nav-cta">Daftar Sekarang</a></li>
+  </ul>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Buka menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="#biaya">Biaya</a>
+  <a href="#diskon">Diskon</a>
+  <a href="#beasiswa">Beasiswa</a>
+  <a href="#daftar" class="nav-cta">Daftar Sekarang</a>
+</div>
 
-<!-- ══════════ MOBILE BOTTOM NAV ══════════ -->
-<nav class="mobile-nav" id="mobile-nav">
-  <div class="mobile-nav-inner">
-    <a href="#info"        class="mobile-nav-btn active" data-section="info">
-      <span class="mn-icon">📌</span>
-      <span class="mn-label">Info</span>
-    </a>
-    <a href="#persyaratan" class="mobile-nav-btn" data-section="persyaratan">
-      <span class="mn-icon">📄</span>
-      <span class="mn-label">Syarat</span>
-    </a>
-    <a href="#alur"        class="mobile-nav-btn" data-section="alur">
-      <span class="mn-icon">🔄</span>
-      <span class="mn-label">Alur</span>
-    </a>
-    <a href="#tatatertib"  class="mobile-nav-btn" data-section="tatatertib">
-      <span class="mn-icon">📜</span>
-      <span class="mn-label">Tertib</span>
-    </a>
-    <a href="#sanksi"      class="mobile-nav-btn" data-section="sanksi">
-      <span class="mn-icon">⚠️</span>
-      <span class="mn-label">Sanksi</span>
-    </a>
-    <a href="#faq"         class="mobile-nav-btn" data-section="faq">
-      <span class="mn-icon">❓</span>
-      <span class="mn-label">FAQ</span>
-    </a>
+<!-- HERO -->
+<section class="hero">
+  <div class="glow-gold"></div>
+  <div class="hero-eyebrow">
+    <span class="eyebrow-dot"></span>
+    Tahun Ajaran 2025/2026
   </div>
-</nav>
+  <h1 class="hero-title">
+    Informasi <span class="accent">Biaya Pendidikan</span><br>
+    SMK Ciledug Al Musaddadiyah
+  </h1>
+  <p class="hero-subtitle">
+    Investasi terbaik untuk masa depan. Transparansi biaya, berbagai pilihan jalur beasiswa, dan kemudahan pembayaran untuk mendukung pendidikan berkualitas putra-putri Anda.
+  </p>
+</section>
 
-<!-- ══════════ MAIN ══════════ -->
-<main>
-
-  <div class="admin-bar" id="adminBar">
-    <span class="admin-bar-label">🛠️ Mode Admin Aktif</span>
-    <div class="admin-bar-actions">
-      <button class="btn btn-gold btn-sm" id="btnSaveAdmin">💾 Simpan Semua</button>
-      <button class="btn btn-ghost btn-sm" id="btnChangePassword">🔑 Ganti Kata Sandi</button>
-      <button class="btn btn-ghost btn-sm" id="btnExitAdmin">🚪 Keluar</button>
-    </div>
+<!-- BIAYA SECTION -->
+<section id="biaya">
+  <div class="section-header reveal">
+    <div class="section-kicker">✦ Rincian Biaya</div>
+    <h2 class="section-title">Biaya <span class="accent">Pendaftaran</span></h2>
+    <p class="section-desc">
+      Berikut adalah rincian lengkap biaya masuk untuk peserta didik baru tahun ajaran 2025/2026. Pilih jenis kelamin untuk melihat detail biaya.
+    </p>
   </div>
 
+  <div class="price-container reveal">
+    <div class="price-toggle">
+      <button class="toggle-btn active" onclick="switchGender('laki')" id="btn-laki">
+        👨 Laki-Laki
+      </button>
+      <button class="toggle-btn" onclick="switchGender('perempuan')" id="btn-perempuan">
+        👩 Perempuan
+      </button>
+    </div>
 
-  <!-- INFO UMUM -->
-  <section class="section" id="info">
-    <div class="section-header">
-      <div class="section-icon">📌</div>
-      <div>
-        <div class="section-title">Informasi Umum PSB</div>
-        <div class="section-desc">Penerimaan Siswa Baru Tahun Pelajaran 2026/2027</div>
+    <div class="price-table" id="price-table">
+      <div class="table-header">
+        <div>No.</div>
+        <div>Komponen Pembiayaan</div>
+        <div class="col-laki">Laki-Laki</div>
+        <div class="col-perempuan">Perempuan</div>
       </div>
+      <div id="price-rows">
+        <!-- Baris biaya dirender otomatis lewat JavaScript dari data (lihat script di akhir halaman) -->
+        <noscript>
+          <div class="table-row"><div class="row-num">!</div><div class="row-label">Aktifkan JavaScript untuk melihat rincian biaya.</div><div></div><div></div></div>
+        </noscript>
+      </div>
+      <div id="price-total"></div>
     </div>
-    <div class="info-grid">
-      <div class="info-card">
-        <div class="info-card-icon">📅</div>
-        <div class="info-card-label">Pendaftaran</div>
-        <div class="info-card-value">Juni – Juli</div>
-        <div class="info-card-sub">Setiap hari kerja</div>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">🕐</div>
-        <div class="info-card-label">Jam Layanan</div>
-        <div class="info-card-value">08.00 – 14.00</div>
-        <div class="info-card-sub">Senin – Sabtu (WIB)</div>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">💰</div>
-        <div class="info-card-label">Biaya Pendaftaran</div>
-        <div class="info-card-value">Rp 200.000</div>
-        <div class="info-card-sub">Tidak dapat dikembalikan</div>
-      </div>
-      <div class="info-card">
-        <div class="info-card-icon">📞</div>
-        <div class="info-card-label">Kontak</div>
-        <div class="info-card-value">087856681523</div>
-        <div class="info-card-sub">Tata Usaha Sekolah</div>
-      </div>
-    </div>
-    <div class="alert alert-info" style="margin-top:20px;">
-      <div class="alert-icon">🏫</div>
-      <div class="alert-text">
-        <strong>Program Keahlian Tersedia:</strong><br>
-        Teknik Komputer &amp; Jaringan (TKJ) · Akuntansi (AK) · Manajemen Perkantoran (MP) · Bisnis Digital (BD) · Desain Komunikasi Visual (DKV) · Teknik Kendaraan Ringan (TKR) · Teknik Sepeda Motor (TSM)
-      </div>
-    </div>
-  </section>
 
-  <!-- PERSYARATAN -->
-  <section class="section" id="persyaratan">
-    <div class="section-header">
-      <div class="section-icon">📄</div>
-      <div>
-        <div class="section-title">Persyaratan Pendaftaran</div>
-        <div class="section-desc">Dokumen wajib dilengkapi sebelum mendaftar</div>
+    <div class="info-boxes">
+      <div class="info-box reveal">
+        <div class="info-icon">💳</div>
+        <div class="info-title">Sistem Pembayaran</div>
+        <div class="info-desc">
+          Pembayaran dapat dilakukan secara <span class="info-highlight">tunai</span> atau <span class="info-highlight">transfer</span> ke rekening resmi sekolah.
+        </div>
       </div>
-    </div>
-    <div class="card">
-      <div class="card-header-bar">📋 Berkas Administrasi yang Harus Diserahkan</div>
-      <div class="req-list" id="reqList" aria-live="polite"></div>
-      <div class="section-admin-actions">
-        <button class="btn btn-primary btn-sm" id="btnAddReq" type="button">➕ Tambah Persyaratan</button>
-        <button class="btn btn-danger btn-sm" id="btnResetReq" type="button">🔄 Reset Persyaratan ke Bawaan</button>
+      <div class="info-box reveal">
+        <div class="info-icon">📋</div>
+        <div class="info-title">Cicilan Tersedia</div>
+        <div class="info-desc">
+          Kami menyediakan <span class="info-highlight">skema cicilan</span> untuk meringankan beban orang tua. Konsultasikan dengan bagian keuangan.
+        </div>
       </div>
-    </div>
-    <div class="alert alert-warning">
-      <div class="alert-icon">⚠️</div>
-      <div class="alert-text" id="specialReqWrap">
-        <strong>Persyaratan Khusus:</strong> <span id="specialReqText" class="editable-field" contenteditable="false">Calon siswa berusia maksimal 21 tahun pada saat awal tahun pelajaran. Calon siswa bersedia mengikuti kegiatan pesantren dan keagamaan yang diselenggarakan oleh sekolah.</span>
-      </div>
-    </div>
-  </section>
-
-  <!-- ALUR PENDAFTARAN -->
-  <section class="section" id="alur">
-    <div class="section-header">
-      <div class="section-icon">🔄</div>
-      <div>
-        <div class="section-title">Alur Pendaftaran</div>
-        <div class="section-desc">Ikuti langkah berikut secara berurutan</div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">1</div>
-          <div class="step-content">
-            <div class="step-title">Ambil &amp; Isi Formulir</div>
-            <div class="step-desc">Ambil formulir pendaftaran di Tata Usaha atau unduh di website sekolah. Isi dengan lengkap dan benar menggunakan huruf cetak.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">2</div>
-          <div class="step-content">
-            <div class="step-title">Lengkapi Berkas</div>
-            <div class="step-desc">Siapkan semua dokumen persyaratan, susun dalam map berwarna hijau, dan beri label nama calon siswa.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">3</div>
-          <div class="step-content">
-            <div class="step-title">Serahkan Berkas &amp; Bayar Biaya Pendaftaran</div>
-            <div class="step-desc">Serahkan berkas ke loket Tata Usaha dan lakukan pembayaran biaya pendaftaran. Simpan bukti pembayaran.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">4</div>
-          <div class="step-content">
-            <div class="step-title">Seleksi Administrasi &amp; Tes</div>
-            <div class="step-desc">Calon siswa akan mengikuti tes tertulis (Matematika, Bahasa Indonesia, Ilmu Pengetahuan Umum) dan wawancara. Bagi yang beragama Islam, ada tes membaca Al-Qur'an.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">5</div>
-          <div class="step-content">
-            <div class="step-title">Pengumuman Hasil Seleksi</div>
-            <div class="step-desc">Hasil seleksi diumumkan melalui papan pengumuman sekolah dan website resmi. Calon siswa yang diterima wajib melakukan daftar ulang.</div>
-          </div>
-        </div>
-        <div class="step">
-          <div class="step-num">6</div>
-          <div class="step-content">
-            <div class="step-title">Daftar Ulang &amp; Orientasi</div>
-            <div class="step-desc">Selesaikan administrasi daftar ulang sesuai jadwal. Wajib mengikuti kegiatan Masa Pengenalan Lingkungan Sekolah (MPLS).</div>
-          </div>
+      <div class="info-box reveal">
+        <div class="info-icon">🎯</div>
+        <div class="info-title">Sudah Termasuk</div>
+        <div class="info-desc">
+          Biaya mencakup <span class="info-highlight">seragam lengkap, buku, kegiatan ekstrakurikuler</span>, dan fasilitas pembelajaran modern.
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- TATA TERTIB -->
-  <section class="section" id="tatatertib">
-    <div class="section-header">
-      <div class="section-icon">📜</div>
-      <div>
-        <div class="section-title">Tata Tertib Siswa</div>
-        <div class="section-desc">Berlaku selama menjadi siswa SMKS Ciledug Al Musaddadiyah</div>
+<!-- DISCOUNT SECTION -->
+<section id="diskon">
+  <div class="price-container">
+    <div class="discount-section reveal">
+      <div class="discount-badge">
+        <span>⭐</span>
+        Penawaran Khusus
       </div>
+      <h3 class="discount-title">Diskon & <span class="gold-text">Keringanan Biaya</span></h3>
+      <p class="discount-desc">
+        Kami memahami pentingnya pendidikan berkualitas yang terjangkau. Berikut adalah berbagai program keringanan yang dapat Anda manfaatkan:
+      </p>
+      <ul class="discount-list">
+        <li>
+          <strong>Diskon Alumni 50%</strong> — Peserta didik baru dari SMP dan MTs Al Musaddadiyah berhak mendapatkan potongan 50% dari biaya USP
+        </li>
+        <li>
+          <strong>Beasiswa 100%</strong> — Program beasiswa penuh untuk siswa berprestasi akademik atau dari keluarga kurang mampu
+        </li>
+        <li>
+          <strong>Beasiswa 75%</strong> — Keringanan biaya untuk siswa dengan prestasi olahraga atau seni di tingkat kabupaten/provinsi
+        </li>
+        <li>
+          <strong>Beasiswa 50%</strong> — Subsidi untuk siswa yang menunjukkan potensi dan semangat belajar tinggi
+        </li>
+      </ul>
     </div>
+  </div>
+</section>
 
-    <div class="card" style="margin-bottom:16px;">
-      <div class="rule-group">
-        <div class="rule-group-title">⏰ A. Kehadiran &amp; Kedisiplinan Waktu</div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib hadir di sekolah paling lambat pukul 07.00 WIB. Pintu gerbang ditutup tepat pukul 07.00 WIB.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Keterlambatan lebih dari 15 menit tanpa keterangan yang sah dihitung sebagai alpha (absen tanpa keterangan).</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa yang tidak hadir wajib menyerahkan surat izin dari orang tua/wali pada hari berikutnya atau menghubungi pihak sekolah sebelum pukul 08.00 WIB.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Izin tidak masuk sekolah untuk keperluan penting diberikan paling banyak 3 hari dalam satu semester.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa sakit lebih dari 3 hari wajib menyertakan surat keterangan dokter.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Kehadiran minimal 80% per semester sebagai syarat kenaikan kelas dan kelulusan.</div></div>
-      </div>
-    </div>
+<!-- BEASISWA INFO -->
+<section id="beasiswa" style="background: linear-gradient(180deg, rgba(58,64,240,0.07) 0%, transparent 100%); padding-top: 4rem;">
+  <div class="section-header reveal">
+    <div class="section-kicker">✦ Program Beasiswa</div>
+    <h2 class="section-title">Raih <span class="accent">Beasiswa</span> Impianmu</h2>
+    <p class="section-desc">
+      Jangan biarkan kendala biaya menghalangi impianmu. Kami memiliki 3 jalur beasiswa dengan total kuota terbatas untuk siswa-siswi terbaik.
+    </p>
+  </div>
 
-    <div class="card" style="margin-bottom:16px;">
-      <div class="rule-group">
-        <div class="rule-group-title">👔 B. Pakaian &amp; Penampilan</div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib mengenakan seragam sekolah sesuai ketentuan: Senin–Selasa seragam putih abu-abu, Rabu–Kamis seragam batik sekolah, Jumat seragam pramuka/muslim, Sabtu seragam olahraga/praktek.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Seragam harus bersih, rapi, tidak kusut, dan dikenakan sebagaimana mestinya (baju dimasukkan ke dalam celana/rok).</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Siswi wajib mengenakan jilbab/kerudung yang menutup dada selama berada di lingkungan sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa putra rambut harus rapi, tidak melebihi telinga dan kerah baju, tidak dicat, tidak di-gel berlebihan.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang memakai aksesoris berlebihan: gelang, kalung logam, anting (bagi siswa putra), tindik, atau tato.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang menggunakan sepatu hak tinggi (heels). Sepatu yang diperbolehkan berwarna hitam bermodel tertutup.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang memakai make-up berlebihan dan kutek/cat kuku di lingkungan sekolah.</div></div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-bottom:16px;">
-      <div class="rule-group">
-        <div class="rule-group-title">🤝 C. Perilaku &amp; Etika</div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib bersikap sopan, hormat, dan santun kepada seluruh warga sekolah: guru, karyawan, dan sesama siswa.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib mengucapkan salam ketika bertemu guru atau memasuki ruangan.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib mengikuti kegiatan shalat berjamaah Dzuhur dan Ashar yang diselenggarakan sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib mengikuti seluruh kegiatan keagamaan sekolah: tadarus Al-Qur'an, peringatan hari besar Islam, dan kegiatan pesantren.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang keras melakukan perundungan (bullying), kekerasan fisik maupun verbal, atau tindakan diskriminatif dalam bentuk apapun.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang keras membawa, mengonsumsi, atau menyebarkan rokok, minuman keras, narkoba, dan sejenisnya.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang keras melakukan tawuran, vandalisme, atau perbuatan kriminal lainnya di dalam maupun di luar sekolah yang mencemarkan nama baik sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang berpacaran secara berlebihan atau melakukan tindakan asusila di lingkungan sekolah.</div></div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-bottom:16px;">
-      <div class="rule-group">
-        <div class="rule-group-title">📚 D. Kegiatan Belajar Mengajar</div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib mengikuti seluruh kegiatan KBM dengan penuh perhatian dan aktif berpartisipasi.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib mengerjakan dan mengumpulkan tugas, PR, atau proyek sesuai tenggat waktu yang ditetapkan guru.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang menyontek, menjiplak (plagiat), atau membantu perbuatan curang dalam bentuk apapun saat ujian maupun pengerjaan tugas.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang membawa dan menggunakan ponsel/HP selama jam pelajaran berlangsung. HP dikumpulkan di loker yang disediakan sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib menjaga ketertiban, kebersihan, dan kenyamanan ruang kelas dan lingkungan sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Dilarang meninggalkan kelas selama pelajaran berlangsung tanpa izin guru yang mengajar.</div></div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-bottom:16px;">
-      <div class="rule-group">
-        <div class="rule-group-title">🏛️ E. Penggunaan Fasilitas Sekolah</div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa wajib menjaga dan merawat seluruh fasilitas sekolah: gedung, peralatan lab, buku perpustakaan, dan inventaris kelas.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Fasilitas komputer dan lab hanya digunakan untuk keperluan belajar sesuai jadwal dan arahan guru.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Dilarang merusak, mencoret-coret dinding, meja, kursi, atau properti sekolah lainnya.</div></div>
-        <div class="rule-item"><div class="rule-dot"></div><div>Siswa yang meminjam alat atau buku dari sekolah wajib mengembalikannya dalam kondisi baik dan tepat waktu.</div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="rule-group">
-        <div class="rule-group-title">🎯 F. Kegiatan Ekstrakurikuler &amp; Organisasi</div>
-        <div class="rule-item"><div class="rule-dot gold"></div><div>Siswa wajib mengikuti minimal satu kegiatan ekstrakurikuler yang tersedia di sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot gold"></div><div>Siswa dianjurkan aktif dalam kegiatan OSIS dan organisasi kepemudaan Islam yang diselenggarakan sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot gold"></div><div>Kegiatan ekstrakurikuler atau rapat OSIS yang dilaksanakan di luar jam sekolah wajib mendapat izin dari pihak sekolah dan seizin orang tua.</div></div>
-        <div class="rule-item"><div class="rule-dot gold"></div><div>Siswa yang mengikuti kegiatan perlombaan/olimpiade mewakili sekolah wajib mempersiapkan diri dengan sungguh-sungguh dan menjaga nama baik sekolah.</div></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SANKSI -->
-  <section class="section" id="sanksi">
-    <div class="section-header">
-      <div class="section-icon">⚠️</div>
-      <div>
-        <div class="section-title">Ketentuan Sanksi &amp; Penghargaan</div>
-        <div class="section-desc">Konsekuensi pelanggaran dan apresiasi prestasi siswa</div>
-      </div>
-    </div>
-
-    <div class="card" style="margin-bottom:16px;">
-      <div class="card-header-bar">📊 Tingkatan Pelanggaran &amp; Sanksi</div>
-      <div class="rule-group">
-        <div class="rule-group-title" style="background:#e3f2fd;border-color:#42a5f5;">🟡 Pelanggaran Ringan (Peringatan Lisan / Tertulis)</div>
-        <div class="rule-item"><div class="rule-dot gold"></div><div>Terlambat 1–2 kali dalam sebulan → teguran lisan dan bimbingan guru BK.</div></div>
-        <div class="rule-item"><div class="rule-dot gold"></div><div>Tidak mengerjakan tugas 1–2 kali → tugas susulan dan pengurangan nilai.</div></div>
-        <div class="rule-item"><div class="rule-dot gold"></div><div>Seragam tidak sesuai ketentuan → penggantian seragam sementara dan surat peringatan.</div></div>
-      </div>
-      <div class="rule-group">
-        <div class="rule-group-title" style="background:#fff8ee;border-color:#f5a623;">🟠 Pelanggaran Sedang (Pemanggilan Orang Tua)</div>
-        <div class="rule-item"><div class="rule-dot" style="background:#ed8936;"></div><div>Terlambat lebih dari 3 kali atau alpha lebih dari 5 hari dalam satu semester → panggilan orang tua dan surat peringatan tertulis.</div></div>
-        <div class="rule-item"><div class="rule-dot" style="background:#ed8936;"></div><div>Membawa HP dan menggunakannya saat KBM → HP disita, dikembalikan kepada orang tua, surat peringatan pertama.</div></div>
-        <div class="rule-item"><div class="rule-dot" style="background:#ed8936;"></div><div>Menyontek saat ujian → nilai ujian 0, laporan kepada orang tua, dan skorsing 1–3 hari.</div></div>
-      </div>
-      <div class="rule-group">
-        <div class="rule-group-title" style="background:#fce4ec;border-color:#e53935;">🔴 Pelanggaran Berat (Skorsing / Dikeluarkan)</div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Melakukan kekerasan/tawuran → skorsing 3–14 hari dan wajib membuat pernyataan tidak mengulangi; jika berulang dikeluarkan dari sekolah.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Terbukti membawa/mengonsumsi narkoba atau minuman keras → dikeluarkan dari sekolah secara permanen dan dilaporkan kepada pihak berwajib.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Melakukan tindakan asusila di lingkungan sekolah → dikeluarkan dari sekolah setelah melalui sidang tim disiplin.</div></div>
-        <div class="rule-item"><div class="rule-dot red"></div><div>Merusak fasilitas sekolah secara sengaja → wajib mengganti kerugian dan dapat dikeluarkan dari sekolah.</div></div>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="card-header-bar" style="background:linear-gradient(90deg,#7a5900,#c9a008);">🏆 Penghargaan Siswa Berprestasi</div>
-      <div class="req-list">
-        <div class="req-item">
-          <div class="req-num" style="background:var(--gold);color:var(--blue-deep);">★</div>
-          <div><div class="req-text">Siswa dengan nilai akademik terbaik setiap semester mendapatkan piagam penghargaan dan hadiah dari sekolah.</div></div>
+  <div class="price-container">
+    <div class="info-boxes">
+      <div class="info-box reveal">
+        <div class="info-icon">📚</div>
+        <div class="info-title">Beasiswa Akademik</div>
+        <div class="info-desc">
+          Untuk siswa dengan prestasi akademik cemerlang. Pembebasan biaya SPP hingga <span class="info-highlight">100%</span> selama masa studi.
         </div>
-        <div class="req-item">
-          <div class="req-num" style="background:var(--gold);color:var(--blue-deep);">★</div>
-          <div><div class="req-text">Siswa yang memenangkan lomba/kompetisi tingkat kabupaten, provinsi, atau nasional mendapatkan penghargaan khusus dan dapat dipertimbangkan untuk beasiswa.</div></div>
+      </div>
+      <div class="info-box reveal">
+        <div class="info-icon">🏆</div>
+        <div class="info-title">Beasiswa Atlet</div>
+        <div class="info-desc">
+          Bagi atlet berprestasi yang ingin mengembangkan bakatnya. Keringanan hingga <span class="info-highlight">75%</span> dari total biaya.
         </div>
-        <div class="req-item">
-          <div class="req-num" style="background:var(--gold);color:var(--blue-deep);">★</div>
-          <div><div class="req-text">Siswa dengan kehadiran 100% selama satu semester mendapatkan penghargaan kedisiplinan.</div></div>
-        </div>
-        <div class="req-item">
-          <div class="req-num" style="background:var(--gold);color:var(--blue-deep);">★</div>
-          <div><div class="req-text">Siswa yang aktif dalam kegiatan organisasi dan menunjukkan kepemimpinan yang baik mendapatkan sertifikat kepemimpinan.</div></div>
+      </div>
+      <div class="info-box reveal">
+        <div class="info-icon">❤️</div>
+        <div class="info-title">CALM Peduli</div>
+        <div class="info-desc">
+          Program kepedulian untuk keluarga kurang mampu. Subsidi hingga <span class="info-highlight">100%</span> dengan verifikasi dokumen.
         </div>
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="alert alert-info" style="margin-top:16px;">
-      <div class="alert-icon">ℹ️</div>
-      <div class="alert-text">
-        Tata tertib ini dibuat berdasarkan nilai-nilai Islam dan peraturan pendidikan nasional. Seluruh warga sekolah wajib menjunjung tinggi akhlakul karimah sebagaimana yang diajarkan dalam Al-Qur'an dan Sunnah Rasulullah SAW.
-      </div>
+<!-- CTA -->
+<section class="cta-section" id="daftar">
+  <div class="cta-box reveal">
+    <div class="section-kicker">✦ Wujudkan Masa Depan Cemerlang</div>
+    <h2 class="cta-title">Daftar Sekarang dan Raih <span class="gold-text">Kesempatanmu</span></h2>
+    <p class="cta-sub">
+      Investasi pendidikan adalah investasi terbaik. Dengan berbagai pilihan beasiswa dan kemudahan pembayaran, tidak ada alasan untuk menunda impian.
+    </p>
+    <div class="cta-buttons">
+      <a href="#" class="btn-primary">📝 Daftar Online Sekarang</a>
+      <a href="tel:+62" class="btn-secondary">💬 Konsultasi Biaya</a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- FAQ -->
-  <section class="section" id="faq">
-    <div class="section-header">
-      <div class="section-icon">❓</div>
-      <div>
-        <div class="section-title">Pertanyaan yang Sering Diajukan</div>
-        <div class="section-desc">Jawaban singkat seputar Penerimaan Siswa Baru</div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header-bar">💬 FAQ Pendaftaran</div>
-      <div class="faq-list" id="faqList" aria-live="polite"></div>
-      <div class="section-admin-actions">
-        <button class="btn btn-primary btn-sm" id="btnAddFaq" type="button">➕ Tambah FAQ</button>
-        <button class="btn btn-danger btn-sm" id="btnResetFaq" type="button">🔄 Reset FAQ ke Bawaan</button>
-      </div>
-    </div>
-    <div class="alert alert-info" style="margin-top:16px;">
-      <div class="alert-icon">ℹ️</div>
-      <div class="alert-text">Tidak menemukan jawaban yang dicari? Hubungi Tata Usaha sekolah di nomor yang tertera pada bagian Info Umum.</div>
-    </div>
-  </section>
-
-</main>
-
-<!-- ══════════ FOOTER ══════════ -->
+<!-- FOOTER -->
 <footer>
-  <div class="footer-ayat">وَمَن يَتَّقِ اللَّهَ يَجْعَل لَّهُ مَخْرَجًا</div>
-  <div class="footer-terjemah">"Barangsiapa bertakwa kepada Allah, niscaya Dia akan membukakan jalan keluar baginya." (QS. At-Talaq: 2)</div>
-  <strong>SMKS Ciledug Al Musaddadiyah</strong><br>
-  Jl. Mayor Syamsu No. 02 Jayaraga, Tarogong Kidul, Garut, Jawa Barat<br>
-  <span style="font-size:11.5px;color:rgba(255,255,255,.4);">Dokumen ini diterbitkan untuk keperluan Penerimaan Siswa Baru — TP 2026/2027</span>
+  <div class="footer-brand">
+    SMKS Ciledug <span>Al Musaddadiyah</span><br>
+    <span style="color:var(--text-muted);opacity:0.6;font-weight:400;font-size:0.7rem;">Informasi Biaya TA 2025/2026</span>
+  </div>
+  <div class="footer-copy">
+    © 2025 SMKS Ciledug Al Musaddadiyah. Hak cipta dilindungi.
+    &nbsp;·&nbsp;<button type="button" class="admin-trigger" id="admin-open-btn">⚙ Admin</button>
+  </div>
 </footer>
 
-<!-- ══════════ ADMIN: FAB + MODAL ══════════ -->
-<button class="admin-fab" id="adminFab" title="Mode Admin" type="button">🔐</button>
-
-<div class="admin-overlay" id="adminOverlay">
+<!-- ADMIN LOGIN MODAL -->
+<div class="admin-overlay" id="admin-login-overlay" role="dialog" aria-modal="true" aria-labelledby="admin-login-title">
   <div class="admin-modal">
-    <h3>Login Admin</h3>
-    <p>Masuk untuk memperbarui data Persyaratan &amp; FAQ. Perubahan disimpan di penyimpanan lokal perangkat/browser ini.</p>
-    <div class="admin-lock-notice" id="adminLockNotice"></div>
-    <div class="admin-error" id="adminError">Kata sandi salah, coba lagi.</div>
-    <input type="password" id="adminPassword" placeholder="Masukkan kata sandi admin" autocomplete="off" />
+    <button type="button" class="admin-close" id="admin-login-close" aria-label="Tutup">✕</button>
+    <h3 id="admin-login-title">🔒 Login Admin</h3>
+    <p class="admin-modal-sub">Masuk untuk mengelola rincian biaya (tambah, ubah, hapus). Hanya untuk staf berwenang.</p>
+    <div class="admin-error" id="admin-login-error"></div>
+    <form id="admin-login-form" autocomplete="off">
+      <div class="admin-field">
+        <label for="admin-password-input">Kata Sandi Admin</label>
+        <input type="password" id="admin-password-input" name="admin-password" placeholder="Masukkan kata sandi" autocomplete="current-password" required>
+      </div>
+      <div class="admin-btn-row">
+        <button type="submit" class="admin-btn admin-btn-primary" id="admin-login-submit">Masuk</button>
+        <button type="button" class="admin-btn admin-btn-ghost" id="admin-login-cancel">Batal</button>
+      </div>
+      <div class="admin-lockout" id="admin-lockout-msg"></div>
+    </form>
+    <div class="admin-note">Sesi admin otomatis berakhir setelah 15 menit tidak aktif atau saat tab ditutup.</div>
+  </div>
+</div>
+
+<!-- ADMIN PANEL MODAL -->
+<div class="admin-overlay" id="admin-panel-overlay" role="dialog" aria-modal="true" aria-labelledby="admin-panel-title">
+  <div class="admin-modal admin-modal-wide">
+    <button type="button" class="admin-close" id="admin-panel-close" aria-label="Tutup">✕</button>
+    <div class="admin-toolbar">
+      <div>
+        <h3 id="admin-panel-title" style="margin-bottom:0.3rem;">🛠️ Kelola Rincian Biaya</h3>
+        <span class="admin-badge">● Sesi admin aktif</span>
+      </div>
+      <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
+        <button type="button" class="admin-btn admin-btn-ghost" id="admin-change-pw-btn" style="flex:none;">Ganti Kata Sandi</button>
+        <button type="button" class="admin-btn admin-btn-danger" id="admin-logout-btn" style="flex:none;">Keluar</button>
+      </div>
+    </div>
+
+    <div class="admin-success" id="admin-panel-success"></div>
+    <div class="admin-error" id="admin-panel-error"></div>
+
+    <div class="admin-total-preview" id="admin-total-preview"></div>
+
+    <div class="admin-rows" id="admin-rows-container"></div>
+
     <div class="admin-btn-row">
-      <button class="btn btn-ghost" id="btnCancelAdmin" type="button">Batal</button>
-      <button class="btn btn-primary" id="btnLoginAdmin" type="button">Masuk</button>
+      <button type="button" class="admin-btn admin-btn-ghost" id="admin-add-row-btn">➕ Tambah Komponen</button>
+      <button type="button" class="admin-btn admin-btn-primary" id="admin-save-btn">💾 Simpan Perubahan</button>
+      <button type="button" class="admin-btn admin-btn-danger" id="admin-reset-btn">↺ Reset ke Default</button>
+    </div>
+    <div class="admin-note">
+      Perubahan disimpan di browser perangkat ini (localStorage) dan langsung diterapkan ke tampilan halaman. Karena halaman ini statis (tanpa server), data <strong>tidak otomatis tersinkron</strong> ke pengunjung lain — untuk mempublikasikan perubahan secara permanen ke semua pengunjung, ekspor data lalu minta developer memperbarui berkas sumber.
     </div>
   </div>
 </div>
 
-<div class="admin-overlay" id="changePasswordOverlay">
+<!-- ADMIN CHANGE PASSWORD MODAL -->
+<div class="admin-overlay" id="admin-pw-overlay" role="dialog" aria-modal="true" aria-labelledby="admin-pw-title">
   <div class="admin-modal">
-    <h3>Ganti Kata Sandi Admin</h3>
-    <p>Minimal 6 karakter. Kata sandi baru langsung berlaku di perangkat/browser ini.</p>
-    <div class="admin-error" id="changePasswordError">Kata sandi tidak cocok atau terlalu pendek (min. 6 karakter).</div>
-    <input type="password" id="newPassword1" placeholder="Kata sandi baru" autocomplete="new-password" />
-    <input type="password" id="newPassword2" placeholder="Ulangi kata sandi baru" autocomplete="new-password" />
-    <div class="admin-btn-row">
-      <button class="btn btn-ghost" id="btnCancelChangePassword" type="button">Batal</button>
-      <button class="btn btn-primary" id="btnSaveChangePassword" type="button">Simpan</button>
-    </div>
+    <button type="button" class="admin-close" id="admin-pw-close" aria-label="Tutup">✕</button>
+    <h3 id="admin-pw-title">🔑 Ganti Kata Sandi Admin</h3>
+    <p class="admin-modal-sub">Kata sandi baru disimpan sebagai hash SHA-256 di browser ini, bukan teks polos.</p>
+    <div class="admin-error" id="admin-pw-error"></div>
+    <div class="admin-success" id="admin-pw-success"></div>
+    <form id="admin-pw-form" autocomplete="off">
+      <div class="admin-field">
+        <label for="admin-pw-current">Kata Sandi Saat Ini</label>
+        <input type="password" id="admin-pw-current" autocomplete="current-password" required>
+      </div>
+      <div class="admin-field">
+        <label for="admin-pw-new">Kata Sandi Baru (min. 8 karakter)</label>
+        <input type="password" id="admin-pw-new" autocomplete="new-password" minlength="8" required>
+      </div>
+      <div class="admin-field">
+        <label for="admin-pw-confirm">Ulangi Kata Sandi Baru</label>
+        <input type="password" id="admin-pw-confirm" autocomplete="new-password" minlength="8" required>
+      </div>
+      <div class="admin-btn-row">
+        <button type="submit" class="admin-btn admin-btn-primary">Simpan Kata Sandi</button>
+        <button type="button" class="admin-btn admin-btn-ghost" id="admin-pw-cancel">Batal</button>
+      </div>
+    </form>
   </div>
 </div>
-
-<div class="admin-toast" id="adminToast"></div>
 
 <script>
-  // Sinkronisasi active state untuk nav desktop & mobile
-  const tabs       = document.querySelectorAll('.nav-tab');
-  const mobileBtns = document.querySelectorAll('.mobile-nav-btn');
-  const sections   = document.querySelectorAll('.section');
-
-  function setActive(id) {
-    tabs.forEach(t => {
-      t.classList.toggle('active', t.getAttribute('href') === '#' + id);
-    });
-    mobileBtns.forEach(b => {
-      b.classList.toggle('active', b.dataset.section === id);
-    });
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) setActive(entry.target.id);
-    });
-  }, { rootMargin: '-35% 0px -60% 0px' });
-
-  sections.forEach(s => observer.observe(s));
-
-  // Smooth scroll untuk mobile nav (tap)
-  mobileBtns.forEach(btn => {
-    btn.addEventListener('click', e => {
-      e.preventDefault();
-      const target = document.querySelector(btn.getAttribute('href'));
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  // Hamburger menu
+  const hamburger = document.getElementById('nav-hamburger');
+  const drawer = document.getElementById('nav-drawer');
+  hamburger.addEventListener('click', () => {
+    const open = drawer.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+  drawer.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      drawer.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
     });
   });
 
-  /* ══════════════════════════════════════════════════════════
-     ADMIN MODE — kelola data Persyaratan & FAQ
-     Data disimpan di localStorage browser (khusus perangkat ini).
-     Keamanan:
-       - Kata sandi TIDAK disimpan sebagai teks biasa, hanya hash SHA-256-nya.
-       - Percobaan login dibatasi (rate limit) dengan penguncian sementara
-         yang bertambah lama setiap gagal berulang (mitigasi brute-force).
-       - Sesi admin otomatis keluar setelah tidak ada aktivitas (idle timeout).
-       - Admin bisa mengganti kata sandi sendiri lewat menu "Ganti Kata Sandi".
-     Catatan: ini tetap proteksi sisi-klien (tanpa server), memadai untuk
-     mencegah pengunjung biasa/otomatis mengubah data, tapi bukan pengganti
-     autentikasi server sungguhan untuk data yang benar-benar sensitif.
-  ══════════════════════════════════════════════════════════ */
+  // Smooth scroll dengan offset nav
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href');
+      if (id === '#') return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      const navH = document.querySelector('nav').offsetHeight;
+      const top = target.getBoundingClientRect().top + window.scrollY - navH;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
+
+  // Scroll reveal dengan stagger per section
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('section, .cta-section, footer').forEach(sec => {
+    sec.querySelectorAll('.reveal').forEach((el, i) => {
+      el.style.transitionDelay = (i % 4) * 0.08 + 's';
+      revealObserver.observe(el);
+    });
+  });
+
+  // Gender toggle — mengontrol kolom via class pada <body>
+  function switchGender(gender) {
+    const btnLaki = document.getElementById('btn-laki');
+    const btnPerempuan = document.getElementById('btn-perempuan');
+    const body = document.body;
+
+    if (gender === 'laki') {
+      btnLaki.classList.add('active');
+      btnPerempuan.classList.remove('active');
+      body.classList.remove('show-perempuan');
+      body.classList.add('show-laki');
+    } else {
+      btnPerempuan.classList.add('active');
+      btnLaki.classList.remove('active');
+      body.classList.remove('show-laki');
+      body.classList.add('show-perempuan');
+    }
+  }
+
+  // Inisialisasi: deteksi layar sempit dan aktifkan mode single-column
+  function initGenderToggle() {
+    // Di layar ≤540px, toggle benar-benar menyembunyikan kolom
+    // Di layar lebih lebar, kedua kolom tetap tampil
+    // Default aktif: laki-laki
+    document.body.classList.add('show-laki');
+  }
+  initGenderToggle();
+
+  // Nav scrolled shadow
+  const navEl = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    navEl.style.boxShadow = window.scrollY > 30 ? '0 4px 32px rgba(10,12,140,0.6)' : '';
+  }, { passive: true });
+
+  /* =========================================================================
+     MODUL DATA BIAYA + PANEL ADMIN
+     ------------------------------------------------------------------------
+     Catatan jujur soal keamanan: halaman ini adalah HTML statis tanpa server/
+     backend. Autentikasi di sini (hash SHA-256 + rate limiting) mencegah
+     orang iseng mengubah data lewat UI biasa, TAPI siapa pun yang membuka
+     DevTools tetap bisa memanggil fungsi JS secara langsung di browser
+     mereka sendiri — itu batas keamanan yang mungkin dicapai tanpa server.
+     Perubahan data juga hanya tersimpan di localStorage milik browser admin
+     yang login (tidak otomatis tersebar ke semua pengunjung). Untuk
+     keamanan & sinkronisasi data yang sesungguhnya, ini perlu backend
+     (mis. API + database) dengan autentikasi sisi server.
+     ========================================================================= */
   (function () {
-    // Hash SHA-256 dari kata sandi bawaan "admin123". Untuk mengganti kata sandi
-    // bawaan lewat kode (bukan lewat menu "Ganti Kata Sandi"), hitung hash baru,
-    // misalnya di console browser: crypto.subtle.digest('SHA-256', new TextEncoder().encode('kata-sandi-baru'))
-    const DEFAULT_PASSWORD_HASH = '240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9';
+    'use strict';
 
-    const HASH_KEY          = 'smks_psb_admin_hash_v1';
-    const REQ_STORAGE_KEY    = 'smks_psb_persyaratan_v1';
-    const FAQ_STORAGE_KEY    = 'smks_psb_faq_v1';
-    const SESSION_FLAG_KEY   = 'smks_psb_admin_session';
-    const LAST_ACTIVITY_KEY  = 'smks_psb_admin_last_activity';
-    const FAIL_COUNT_KEY     = 'smks_psb_admin_fail_count';
-    const LOCK_UNTIL_KEY     = 'smks_psb_admin_lock_until';
+    const STORAGE_KEY = 'smk_biaya_data_v1';
+    const ADMIN_HASH_KEY = 'smk_admin_hash_v1';
+    const SESSION_KEY = 'smk_admin_session_v1';
+    const ATTEMPTS_KEY = 'smk_admin_attempts_v1';
 
-    const IDLE_TIMEOUT_MS      = 10 * 60 * 1000; // 10 menit tanpa aktivitas -> auto logout
-    const IDLE_CHECK_INTERVAL  = 15 * 1000;
-    const BASE_LOCK_MS         = 20 * 1000;       // penguncian awal 20 detik
-    const MAX_LOCK_MS          = 5 * 60 * 1000;   // maksimum penguncian 5 menit
-    const ATTEMPTS_BEFORE_LOCK = 3;                // kunci setelah 3x gagal berturut-turut
+    // Hash default = SHA-256 dari kata sandi awal. Ganti lewat menu
+    // "Ganti Kata Sandi" di dalam panel admin setelah login pertama kali.
+    const DEFAULT_ADMIN_HASH = 'ff52f72750b941328a6b6e51ac02a7f199cf2f24fea4fbeb9ebe0a6cd830a767';
 
-    const DEFAULT_REQ_DATA = {
-      items: [
-        { text: 'Fotokopi Ijazah / Surat Keterangan Lulus (SKL) SMP/MTs atau sederajat', note: 'Legalisir oleh kepala sekolah asal — 2 lembar' },
-        { text: 'Fotokopi Rapor SMP/MTs kelas 7, 8, dan semester 1 kelas 9', note: 'Semua halaman, legalisir kepala sekolah — 1 rangkap' },
-        { text: 'Fotokopi Kartu Keluarga (KK)', note: '2 lembar' },
-        { text: 'Fotokopi Akta Kelahiran', note: '2 lembar' },
-        { text: 'Pas foto terbaru berwarna berlatar belakang merah', note: 'Ukuran 3×4 sebanyak 6 lembar; mengenakan seragam SMP/sederajat' },
-        { text: 'Surat Keterangan Sehat dari dokter atau Puskesmas', note: 'Tidak buta warna (khusus program TKJ), bebas narkoba' },
-        { text: 'Surat Keterangan Berkelakuan Baik dari kepala sekolah asal', note: 'Asli, bermaterai Rp 10.000' },
-        { text: 'Fotokopi KTP orang tua / wali', note: '2 lembar' },
-        { text: 'Surat pernyataan orang tua/wali sanggup menaati tata tertib sekolah', note: 'Bermaterai Rp 10.000, ditandatangani calon siswa dan orang tua/wali' },
-        { text: 'Formulir pendaftaran yang telah diisi lengkap', note: 'Tersedia di Tata Usaha atau dapat diunduh di website sekolah' }
-      ],
-      specialNote: 'Calon siswa berusia maksimal 21 tahun pada saat awal tahun pelajaran. Calon siswa bersedia mengikuti kegiatan pesantren dan keagamaan yang diselenggarakan oleh sekolah.'
-    };
+    const SESSION_TIMEOUT_MS = 15 * 60 * 1000; // 15 menit
+    const MAX_ATTEMPTS = 5;
+    const LOCKOUT_MS = 60 * 1000; // 60 detik
 
-    const DEFAULT_FAQ_DATA = {
-      items: [
-        { q: 'Apakah pendaftaran bisa dilakukan secara online?', a: 'Saat ini pendaftaran dilakukan secara langsung (offline) di Tata Usaha sekolah. Formulir pendaftaran dapat diunduh terlebih dahulu dari website untuk diisi di rumah agar lebih cepat.' },
-        { q: 'Bagaimana jika berkas persyaratan belum lengkap saat mendaftar?', a: 'Berkas tetap dapat diserahkan sebagian, namun kelulusan sebagai siswa baru baru dinyatakan sah setelah seluruh berkas dilengkapi maksimal pada saat daftar ulang.' },
-        { q: 'Apakah tersedia beasiswa atau keringanan biaya?', a: 'Sekolah menyediakan program keringanan biaya bagi siswa berprestasi dan siswa dari keluarga kurang mampu (melampirkan surat keterangan tidak mampu). Silakan tanyakan langsung ke Tata Usaha untuk informasi lebih lanjut.' },
-        { q: 'Apakah siswa non-muslim dapat mendaftar di sekolah ini?', a: 'Sekolah berbasis pesantren dan seluruh kegiatan keagamaan yang diselenggarakan bersifat Islami. Calon siswa non-muslim yang berminat mendaftar disarankan berkonsultasi langsung dengan pihak sekolah terlebih dahulu.' },
-        { q: 'Apa yang terjadi jika calon siswa tidak lulus tes seleksi?', a: 'Calon siswa yang belum lulus seleksi dapat berkonsultasi dengan panitia PSB mengenai kemungkinan gelombang pendaftaran berikutnya, selama kuota kelas masih tersedia.' },
-        { q: 'Apakah biaya pendaftaran dapat dikembalikan jika mengundurkan diri?', a: 'Biaya pendaftaran bersifat tidak dapat dikembalikan (non-refundable), sebagaimana tercantum pada bagian Info Umum.' },
-        { q: 'Apa saja yang perlu dibawa saat mengikuti tes seleksi?', a: 'Calon siswa wajib membawa alat tulis, kartu bukti pendaftaran, serta berpakaian rapi dan sopan sesuai ketentuan sekolah.' },
-        { q: 'Bagaimana jika mendaftar melewati periode yang ditentukan?', a: 'Pendaftaran susulan dapat dipertimbangkan selama kuota kelas per program keahlian belum terpenuhi. Silakan hubungi Tata Usaha untuk mengecek ketersediaan kuota terkini.' }
-      ]
-    };
+    const DEFAULT_DATA = [
+      { id: 1,  label: 'Pendaftaran', laki: 200000, perempuan: 200000 },
+      { id: 2,  label: 'USP (Uang Sumbangan Pengembangan)', laki: 1700000, perempuan: 1700000 },
+      { id: 3,  label: 'SPP 1 Bulan', laki: 220000, perempuan: 220000 },
+      { id: 4,  label: 'MPLS (Masa Pengenalan Lingkungan Sekolah)', laki: 95000, perempuan: 95000 },
+      { id: 5,  label: 'OSIS (Organisasi Siswa Intra Sekolah)', laki: 175000, perempuan: 175000 },
+      { id: 6,  label: 'Perpustakaan', laki: 50000, perempuan: 50000 },
+      { id: 7,  label: 'Partisipasi Peningkatan Mutu Sekolah', laki: 850000, perempuan: 850000 },
+      { id: 8,  label: 'Bina Karakter, Kepanduan Pramuka', laki: 195000, perempuan: 195000 },
+      { id: 9,  label: 'Kaos Olahraga & Atribut', laki: 250000, perempuan: 250000 },
+      { id: 10, label: 'Batik', laki: 100000, perempuan: 150000 },
+      { id: 11, label: 'Kesehatan', laki: 100000, perempuan: 100000 }
+    ];
 
-    const el = {
-      fab: document.getElementById('adminFab'),
-      overlay: document.getElementById('adminOverlay'),
-      password: document.getElementById('adminPassword'),
-      error: document.getElementById('adminError'),
-      lockNotice: document.getElementById('adminLockNotice'),
-      btnLogin: document.getElementById('btnLoginAdmin'),
-      btnCancel: document.getElementById('btnCancelAdmin'),
-      adminBar: document.getElementById('adminBar'),
-      btnSave: document.getElementById('btnSaveAdmin'),
-      btnChangePassword: document.getElementById('btnChangePassword'),
-      btnExit: document.getElementById('btnExitAdmin'),
-      reqList: document.getElementById('reqList'),
-      btnAddReq: document.getElementById('btnAddReq'),
-      btnResetReq: document.getElementById('btnResetReq'),
-      specialText: document.getElementById('specialReqText'),
-      faqList: document.getElementById('faqList'),
-      btnAddFaq: document.getElementById('btnAddFaq'),
-      btnResetFaq: document.getElementById('btnResetFaq'),
-      toast: document.getElementById('adminToast'),
-      cpOverlay: document.getElementById('changePasswordOverlay'),
-      cpError: document.getElementById('changePasswordError'),
-      cpPass1: document.getElementById('newPassword1'),
-      cpPass2: document.getElementById('newPassword2'),
-      btnCpSave: document.getElementById('btnSaveChangePassword'),
-      btnCpCancel: document.getElementById('btnCancelChangePassword')
-    };
+    let biayaData = [];
+    let nextId = 1;
 
-    let reqData = loadJson(REQ_STORAGE_KEY, DEFAULT_REQ_DATA, isValidReqData);
-    let faqData = loadJson(FAQ_STORAGE_KEY, DEFAULT_FAQ_DATA, isValidFaqData);
-    let isAdmin = false;
-    let idleTimer = null;
-
-    // ── Util ──
-    function isValidReqData(d) {
-      return d && Array.isArray(d.items) && typeof d.specialNote === 'string';
-    }
-    function isValidFaqData(d) {
-      return d && Array.isArray(d.items);
-    }
-    function loadJson(key, fallback, validator) {
-      try {
-        const raw = localStorage.getItem(key);
-        if (!raw) return structuredCloneSafe(fallback);
-        const parsed = JSON.parse(raw);
-        if (!validator(parsed)) return structuredCloneSafe(fallback);
-        return parsed;
-      } catch (e) {
-        console.warn('Gagal membaca data tersimpan untuk ' + key + ', memakai data bawaan.', e);
-        return structuredCloneSafe(fallback);
-      }
-    }
-    function structuredCloneSafe(obj) { return JSON.parse(JSON.stringify(obj)); }
-
-    function saveAll() {
-      try {
-        localStorage.setItem(REQ_STORAGE_KEY, JSON.stringify(reqData));
-        localStorage.setItem(FAQ_STORAGE_KEY, JSON.stringify(faqData));
-        return true;
-      } catch (e) {
-        console.error('Gagal menyimpan data admin.', e);
-        showToast('⚠️ Gagal menyimpan (penyimpanan browser penuh/diblokir).');
-        return false;
-      }
+    /* ---------- util ---------- */
+    function formatRupiah(n) {
+      const num = Number(n);
+      if (!Number.isFinite(num)) return 'Rp. 0,-';
+      return 'Rp. ' + Math.round(num).toLocaleString('id-ID') + ',-';
     }
 
-    function showToast(msg) {
-      el.toast.textContent = msg;
-      el.toast.classList.add('show');
-      clearTimeout(showToast._t);
-      showToast._t = setTimeout(() => el.toast.classList.remove('show'), 2600);
+    // Bilangan bulat non-negatif yang wajar (maks ~999,999,999) untuk cegah
+    // input aneh/ekstrem merusak tampilan atau perhitungan.
+    function sanitizeAmount(value) {
+      const digitsOnly = String(value).replace(/[^\d]/g, '');
+      if (digitsOnly === '') return 0;
+      const n = parseInt(digitsOnly, 10);
+      if (!Number.isFinite(n) || n < 0) return 0;
+      return Math.min(n, 999999999);
     }
 
-    function escapeHtml(str) {
-      const d = document.createElement('div');
-      d.textContent = str == null ? '' : str;
-      return d.innerHTML;
+    // Batasi panjang & buang karakter kendali; DOM API (textContent) yang
+    // dipakai saat render sudah otomatis aman dari injeksi HTML/script,
+    // ini lapisan tambahan untuk data yang tersimpan.
+    function sanitizeLabel(value) {
+      return String(value)
+        .replace(/[\u0000-\u001F\u007F<>]/g, '')
+        .trim()
+        .slice(0, 120);
     }
 
     async function sha256Hex(text) {
@@ -1288,372 +1503,477 @@
       return Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2, '0')).join('');
     }
 
-    function getStoredHash() {
+    function isValidDataShape(arr) {
+      return Array.isArray(arr) && arr.every(r =>
+        r && typeof r === 'object' &&
+        typeof r.id !== 'undefined' &&
+        typeof r.label === 'string' &&
+        Number.isFinite(Number(r.laki)) &&
+        Number.isFinite(Number(r.perempuan))
+      );
+    }
+
+    /* ---------- load / save data biaya ---------- */
+    function loadData() {
       try {
-        return localStorage.getItem(HASH_KEY) || DEFAULT_PASSWORD_HASH;
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) throw new Error('kosong');
+        const parsed = JSON.parse(raw);
+        if (!isValidDataShape(parsed) || parsed.length === 0) throw new Error('format tidak valid');
+        biayaData = parsed.map(r => ({
+          id: Number(r.id),
+          label: sanitizeLabel(r.label),
+          laki: sanitizeAmount(r.laki),
+          perempuan: sanitizeAmount(r.perempuan)
+        }));
       } catch (e) {
-        return DEFAULT_PASSWORD_HASH;
+        biayaData = DEFAULT_DATA.map(r => ({ ...r }));
       }
+      nextId = biayaData.reduce((max, r) => Math.max(max, r.id), 0) + 1;
     }
 
-    // ── Rate limit / lockout ──
-    function getFailState() {
-      let count = 0, until = 0;
-      try {
-        count = parseInt(localStorage.getItem(FAIL_COUNT_KEY) || '0', 10) || 0;
-        until = parseInt(localStorage.getItem(LOCK_UNTIL_KEY) || '0', 10) || 0;
-      } catch (e) {}
-      return { count, until };
-    }
-    function setFailState(count, until) {
-      try {
-        localStorage.setItem(FAIL_COUNT_KEY, String(count));
-        localStorage.setItem(LOCK_UNTIL_KEY, String(until));
-      } catch (e) {}
-    }
-    function clearFailState() { setFailState(0, 0); }
-
-    function currentLockRemainingMs() {
-      const { until } = getFailState();
-      return Math.max(0, until - Date.now());
+    function saveData() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(biayaData));
     }
 
-    function registerFailedAttempt() {
-      let { count } = getFailState();
-      count += 1;
-      let until = 0;
-      if (count >= ATTEMPTS_BEFORE_LOCK) {
-        // Lockout eksponensial: makin sering gagal, makin lama dikunci (sampai batas maksimum)
-        const extraLocks = count - ATTEMPTS_BEFORE_LOCK;
-        const lockDuration = Math.min(BASE_LOCK_MS * Math.pow(2, extraLocks), MAX_LOCK_MS);
-        until = Date.now() + lockDuration;
-      }
-      setFailState(count, until);
-      return until;
+    function computeTotals() {
+      return biayaData.reduce((acc, r) => {
+        acc.laki += r.laki;
+        acc.perempuan += r.perempuan;
+        return acc;
+      }, { laki: 0, perempuan: 0 });
     }
 
-    let lockCountdownTimer = null;
-    function updateLockUI() {
-      const remaining = currentLockRemainingMs();
-      if (remaining > 0) {
-        const secs = Math.ceil(remaining / 1000);
-        el.lockNotice.style.display = 'block';
-        el.lockNotice.textContent = `🔒 Terlalu banyak percobaan gagal. Coba lagi dalam ${secs} detik.`;
-        el.password.disabled = true;
-        el.btnLogin.disabled = true;
-        clearTimeout(lockCountdownTimer);
-        lockCountdownTimer = setTimeout(updateLockUI, 1000);
-      } else {
-        el.lockNotice.style.display = 'none';
-        el.password.disabled = false;
-        el.btnLogin.disabled = false;
-        clearTimeout(lockCountdownTimer);
-      }
-    }
+    /* ---------- render tabel publik (aman dari XSS: pakai textContent) ---------- */
+    function renderPublicTable() {
+      const rowsEl = document.getElementById('price-rows');
+      const totalEl = document.getElementById('price-total');
+      if (!rowsEl || !totalEl) return;
 
-    // ── Sanitasi paste pada kolom edit (cegah HTML/skrip ikut tertempel) ──
-    document.addEventListener('paste', (e) => {
-      const t = e.target;
-      if (t && t.classList && t.classList.contains('editable-field')) {
-        e.preventDefault();
-        const text = (e.clipboardData || window.clipboardData).getData('text/plain');
-        const sel = window.getSelection();
-        if (!sel || !sel.rangeCount) return;
-        sel.deleteFromDocument();
-        const range = sel.getRangeAt(0);
-        range.deleteContents();
-        range.insertNode(document.createTextNode(text));
-        range.collapse(false);
-      }
-    });
+      rowsEl.innerHTML = '';
+      biayaData.forEach((r, i) => {
+        const row = document.createElement('div');
+        row.className = 'table-row';
 
-    // ── Render: Persyaratan ──
-    function renderReq() {
-      el.reqList.innerHTML = reqData.items.map((item, i) => `
-        <div class="req-item${isAdmin ? ' admin-editing' : ''}" data-idx="${i}">
-          <div class="req-num">${i + 1}</div>
-          <div style="flex:1;">
-            <div class="req-text editable-field" contenteditable="${isAdmin}" data-field="text" data-idx="${i}">${escapeHtml(item.text)}</div>
-            <div class="req-note editable-field" contenteditable="${isAdmin}" data-field="note" data-idx="${i}">${escapeHtml(item.note)}</div>
-          </div>
-          ${isAdmin ? `<button class="admin-del-btn" type="button" data-del-req="${i}" title="Hapus persyaratan ini">✕</button>` : ''}
-        </div>
-      `).join('');
+        const num = document.createElement('div');
+        num.className = 'row-num';
+        num.textContent = (i + 1) + '.';
 
-      el.specialText.textContent = reqData.specialNote;
-      el.specialText.setAttribute('contenteditable', isAdmin ? 'true' : 'false');
+        const label = document.createElement('div');
+        label.className = 'row-label';
+        label.textContent = r.label;
 
-      if (isAdmin) {
-        el.reqList.querySelectorAll('.editable-field').forEach(field => {
-          field.addEventListener('input', onReqFieldInput);
-        });
-        el.reqList.querySelectorAll('[data-del-req]').forEach(btn => {
-          btn.addEventListener('click', onDeleteReqItem);
-        });
-        el.specialText.addEventListener('input', onSpecialInput);
-      }
-    }
-    function onReqFieldInput(e) {
-      const idx = parseInt(e.target.getAttribute('data-idx'), 10);
-      const field = e.target.getAttribute('data-field');
-      if (Number.isInteger(idx) && reqData.items[idx] && (field === 'text' || field === 'note')) {
-        reqData.items[idx][field] = e.target.textContent.trim();
-      }
-    }
-    function onSpecialInput(e) { reqData.specialNote = e.target.textContent.trim(); }
-    function onDeleteReqItem(e) {
-      const idx = parseInt(e.currentTarget.getAttribute('data-del-req'), 10);
-      if (!Number.isInteger(idx)) return;
-      if (reqData.items.length <= 1) { showToast('⚠️ Minimal harus ada 1 persyaratan.'); return; }
-      if (confirm('Hapus persyaratan ini?')) { reqData.items.splice(idx, 1); renderReq(); }
-    }
-    function addReqItem() {
-      reqData.items.push({ text: 'Persyaratan baru — klik untuk mengedit', note: 'Keterangan tambahan (opsional)' });
-      renderReq();
-      focusLastEditable(el.reqList, '.req-text');
-    }
+        const laki = document.createElement('div');
+        laki.className = 'row-price col-laki';
+        laki.textContent = formatRupiah(r.laki);
 
-    // ── Render: FAQ ──
-    function renderFaq() {
-      el.faqList.innerHTML = faqData.items.map((item, i) => `
-        <div class="faq-item" data-idx="${i}">
-          <div class="faq-question" data-toggle="${i}">
-            <div class="faq-q-text editable-field" contenteditable="${isAdmin}" data-field="q" data-idx="${i}">${escapeHtml(item.q)}</div>
-            <div class="faq-toggle-icon">＋</div>
-            ${isAdmin ? `<button class="admin-del-btn" type="button" style="position:static;margin-left:4px;" data-del-faq="${i}" title="Hapus FAQ ini">✕</button>` : ''}
-          </div>
-          <div class="faq-answer">
-            <div class="editable-field" contenteditable="${isAdmin}" data-field="a" data-idx="${i}">${escapeHtml(item.a)}</div>
-          </div>
-        </div>
-      `).join('');
+        const perempuan = document.createElement('div');
+        perempuan.className = 'row-price col-perempuan';
+        perempuan.textContent = formatRupiah(r.perempuan);
 
-      el.faqList.querySelectorAll('[data-toggle]').forEach(qEl => {
-        qEl.addEventListener('click', (e) => {
-          // Jangan toggle buka/tutup jika admin sedang mengklik untuk mengedit teks atau menghapus
-          if (isAdmin && (e.target.classList.contains('editable-field') || e.target.closest('.editable-field') || e.target.hasAttribute('data-del-faq'))) return;
-          const item = qEl.closest('.faq-item');
-          item.classList.toggle('open');
-        });
+        row.append(num, label, laki, perempuan);
+        rowsEl.appendChild(row);
       });
 
-      if (isAdmin) {
-        el.faqList.querySelectorAll('.editable-field').forEach(field => {
-          field.addEventListener('input', onFaqFieldInput);
-        });
-        el.faqList.querySelectorAll('[data-del-faq]').forEach(btn => {
-          btn.addEventListener('click', onDeleteFaqItem);
-        });
-      }
-    }
-    function onFaqFieldInput(e) {
-      const idx = parseInt(e.target.getAttribute('data-idx'), 10);
-      const field = e.target.getAttribute('data-field');
-      if (Number.isInteger(idx) && faqData.items[idx] && (field === 'q' || field === 'a')) {
-        faqData.items[idx][field] = e.target.textContent.trim();
-      }
-    }
-    function onDeleteFaqItem(e) {
-      e.stopPropagation();
-      const idx = parseInt(e.currentTarget.getAttribute('data-del-faq'), 10);
-      if (!Number.isInteger(idx)) return;
-      if (faqData.items.length <= 1) { showToast('⚠️ Minimal harus ada 1 FAQ.'); return; }
-      if (confirm('Hapus FAQ ini?')) { faqData.items.splice(idx, 1); renderFaq(); }
-    }
-    function addFaqItem() {
-      faqData.items.push({ q: 'Pertanyaan baru — klik untuk mengedit', a: 'Jawaban untuk pertanyaan ini (opsional diisi).' });
-      renderFaq();
-      const items = el.faqList.querySelectorAll('.faq-item');
-      const lastItem = items[items.length - 1];
-      if (lastItem) lastItem.classList.add('open');
-      focusLastEditable(el.faqList, '.faq-q-text');
+      const totals = computeTotals();
+      totalEl.innerHTML = '';
+      const total = document.createElement('div');
+      total.className = 'table-total';
+      const blank = document.createElement('div');
+      const totalLabel = document.createElement('div');
+      totalLabel.className = 'total-label';
+      totalLabel.textContent = 'Total Biaya SMK Ciledug';
+      const totalLaki = document.createElement('div');
+      totalLaki.className = 'total-price col-laki';
+      totalLaki.textContent = formatRupiah(totals.laki);
+      const totalPerempuan = document.createElement('div');
+      totalPerempuan.className = 'total-price col-perempuan';
+      totalPerempuan.textContent = formatRupiah(totals.perempuan);
+      total.append(blank, totalLabel, totalLaki, totalPerempuan);
+      totalEl.appendChild(total);
     }
 
-    function focusLastEditable(container, selector) {
-      const nodes = container.querySelectorAll(selector);
-      const target = nodes[nodes.length - 1];
-      if (target) {
-        target.focus();
-        const sel = document.getSelection();
-        if (sel) sel.selectAllChildren(target);
-        if (typeof target.scrollIntoView === 'function') {
-          target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      }
+    /* ---------- elemen DOM admin ---------- */
+    const $ = id => document.getElementById(id);
+    const openBtn = $('admin-open-btn');
+    const loginOverlay = $('admin-login-overlay');
+    const loginForm = $('admin-login-form');
+    const loginError = $('admin-login-error');
+    const loginClose = $('admin-login-close');
+    const loginCancel = $('admin-login-cancel');
+    const passwordInput = $('admin-password-input');
+    const loginSubmit = $('admin-login-submit');
+    const lockoutMsg = $('admin-lockout-msg');
+
+    const panelOverlay = $('admin-panel-overlay');
+    const panelClose = $('admin-panel-close');
+    const panelError = $('admin-panel-error');
+    const panelSuccess = $('admin-panel-success');
+    const rowsContainer = $('admin-rows-container');
+    const totalPreview = $('admin-total-preview');
+    const addRowBtn = $('admin-add-row-btn');
+    const saveBtn = $('admin-save-btn');
+    const resetBtn = $('admin-reset-btn');
+    const logoutBtn = $('admin-logout-btn');
+
+    const changePwBtn = $('admin-change-pw-btn');
+    const pwOverlay = $('admin-pw-overlay');
+    const pwClose = $('admin-pw-close');
+    const pwCancel = $('admin-pw-cancel');
+    const pwForm = $('admin-pw-form');
+    const pwError = $('admin-pw-error');
+    const pwSuccess = $('admin-pw-success');
+
+    let draftData = [];
+    let idleTimer = null;
+
+    function showMsg(el, text) {
+      if (!el) return;
+      el.textContent = text;
+      el.classList.add('show');
+    }
+    function hideMsg(el) {
+      if (!el) return;
+      el.classList.remove('show');
+      el.textContent = '';
     }
 
-    function renderAll() { renderReq(); renderFaq(); }
-
-    // ── Idle timeout ──
-    function touchActivity() {
-      if (!isAdmin) return;
-      try { sessionStorage.setItem(LAST_ACTIVITY_KEY, String(Date.now())); } catch (e) {}
-    }
-    function startIdleWatcher() {
-      touchActivity();
-      ['click', 'keydown', 'input', 'scroll'].forEach(evt => document.addEventListener(evt, touchActivity, { passive: true }));
-      clearInterval(idleTimer);
-      idleTimer = setInterval(() => {
-        if (!isAdmin) return;
-        let last = 0;
-        try { last = parseInt(sessionStorage.getItem(LAST_ACTIVITY_KEY) || '0', 10) || 0; } catch (e) {}
-        if (last && Date.now() - last > IDLE_TIMEOUT_MS) {
-          exitAdminMode();
-          showToast('⏱️ Sesi admin berakhir karena tidak ada aktivitas. Silakan login kembali.');
-        }
-      }, IDLE_CHECK_INTERVAL);
-    }
-    function stopIdleWatcher() {
-      clearInterval(idleTimer);
-      ['click', 'keydown', 'input', 'scroll'].forEach(evt => document.removeEventListener(evt, touchActivity));
-    }
-
-    // ── Mode admin: masuk/keluar ──
-    function enterAdminMode() {
-      isAdmin = true;
-      document.body.classList.add('admin-mode');
-      el.adminBar.classList.add('show');
-      el.fab.classList.add('is-admin');
-      el.fab.textContent = '🔓';
-      el.fab.title = 'Admin aktif — klik untuk keluar';
-      try { sessionStorage.setItem(SESSION_FLAG_KEY, '1'); } catch (e) {}
-      startIdleWatcher();
-      renderAll();
-    }
-    function exitAdminMode() {
-      isAdmin = false;
-      document.body.classList.remove('admin-mode');
-      el.adminBar.classList.remove('show');
-      el.fab.classList.remove('is-admin');
-      el.fab.textContent = '🔐';
-      el.fab.title = 'Mode Admin';
-      try { sessionStorage.removeItem(SESSION_FLAG_KEY); } catch (e) {}
-      stopIdleWatcher();
-      renderAll();
-    }
-
-    // ── Modal login ──
-    function openLoginModal() {
-      el.overlay.classList.add('open');
-      el.error.style.display = 'none';
-      el.password.value = '';
-      updateLockUI();
-      if (currentLockRemainingMs() <= 0) setTimeout(() => el.password.focus(), 50);
-    }
-    function closeLoginModal() { el.overlay.classList.remove('open'); }
-
-    async function attemptLogin() {
-      if (currentLockRemainingMs() > 0) { updateLockUI(); return; }
-      el.btnLogin.disabled = true;
+    /* ---------- rate limiting percobaan login ---------- */
+    function getAttempts() {
       try {
-        const entered = el.password.value;
-        const enteredHash = await sha256Hex(entered);
-        if (enteredHash === getStoredHash()) {
-          clearFailState();
-          closeLoginModal();
-          enterAdminMode();
-          showToast('✅ Mode admin aktif.');
-        } else {
-          const until = registerFailedAttempt();
-          el.error.style.display = 'block';
-          el.password.value = '';
-          if (until > 0) { updateLockUI(); } else { el.password.focus(); }
-        }
-      } catch (err) {
-        console.error('Gagal memverifikasi kata sandi (Web Crypto tidak tersedia).', err);
-        el.error.textContent = 'Login gagal: browser ini tidak mendukung verifikasi aman. Gunakan browser modern (Chrome/Edge/Safari/Firefox terbaru) melalui koneksi HTTPS.';
-        el.error.style.display = 'block';
-      } finally {
-        el.btnLogin.disabled = currentLockRemainingMs() > 0;
+        return JSON.parse(sessionStorage.getItem(ATTEMPTS_KEY)) || { count: 0, lockUntil: 0 };
+      } catch (e) {
+        return { count: 0, lockUntil: 0 };
       }
     }
-
-    // ── Modal ganti kata sandi ──
-    function openChangePasswordModal() {
-      el.cpOverlay.classList.add('open');
-      el.cpError.style.display = 'none';
-      el.cpPass1.value = ''; el.cpPass2.value = '';
-      setTimeout(() => el.cpPass1.focus(), 50);
+    function setAttempts(obj) {
+      sessionStorage.setItem(ATTEMPTS_KEY, JSON.stringify(obj));
     }
-    function closeChangePasswordModal() { el.cpOverlay.classList.remove('open'); }
-    async function saveNewPassword() {
-      const p1 = el.cpPass1.value, p2 = el.cpPass2.value;
-      if (p1.length < 6 || p1 !== p2) {
-        el.cpError.style.display = 'block';
+    function registerFailedAttempt() {
+      const a = getAttempts();
+      a.count += 1;
+      if (a.count >= MAX_ATTEMPTS) {
+        a.lockUntil = Date.now() + LOCKOUT_MS;
+        a.count = 0;
+      }
+      setAttempts(a);
+      return a;
+    }
+    function resetAttempts() {
+      setAttempts({ count: 0, lockUntil: 0 });
+    }
+    function checkLockout() {
+      const a = getAttempts();
+      const remaining = a.lockUntil - Date.now();
+      if (remaining > 0) {
+        return Math.ceil(remaining / 1000);
+      }
+      return 0;
+    }
+
+    /* ---------- sesi admin ---------- */
+    function getAdminHash() {
+      return localStorage.getItem(ADMIN_HASH_KEY) || DEFAULT_ADMIN_HASH;
+    }
+    function startSession() {
+      sessionStorage.setItem(SESSION_KEY, String(Date.now()));
+      resetIdleTimer();
+    }
+    function isSessionValid() {
+      const t = Number(sessionStorage.getItem(SESSION_KEY) || 0);
+      if (!t) return false;
+      return (Date.now() - t) < SESSION_TIMEOUT_MS;
+    }
+    function touchSession() {
+      if (isSessionValid()) sessionStorage.setItem(SESSION_KEY, String(Date.now()));
+    }
+    function endSession() {
+      sessionStorage.removeItem(SESSION_KEY);
+      if (idleTimer) clearTimeout(idleTimer);
+    }
+    function resetIdleTimer() {
+      if (idleTimer) clearTimeout(idleTimer);
+      idleTimer = setTimeout(() => {
+        if (!isSessionValid()) {
+          closeAllAdminOverlays();
+          endSession();
+        }
+      }, SESSION_TIMEOUT_MS + 500);
+    }
+
+    function openOverlay(el) { el.classList.add('open'); }
+    function closeOverlay(el) { el.classList.remove('open'); }
+    function closeAllAdminOverlays() {
+      closeOverlay(loginOverlay);
+      closeOverlay(panelOverlay);
+      closeOverlay(pwOverlay);
+    }
+
+    /* ---------- buka panel admin ---------- */
+    function openLogin() {
+      hideMsg(loginError);
+      passwordInput.value = '';
+      const lockedFor = checkLockout();
+      if (lockedFor > 0) {
+        loginSubmit.disabled = true;
+        showMsg(lockoutMsg, 'Terlalu banyak percobaan gagal. Coba lagi dalam ' + lockedFor + ' detik.');
+      } else {
+        loginSubmit.disabled = false;
+        lockoutMsg.textContent = '';
+      }
+      openOverlay(loginOverlay);
+      setTimeout(() => passwordInput.focus(), 50);
+    }
+
+    function openAdminPanel() {
+      draftData = biayaData.map(r => ({ ...r }));
+      renderAdminRows();
+      hideMsg(panelError);
+      hideMsg(panelSuccess);
+      openOverlay(panelOverlay);
+    }
+
+    function renderAdminRows() {
+      rowsContainer.innerHTML = '';
+      draftData.forEach((r, idx) => {
+        const card = document.createElement('div');
+        card.className = 'admin-row-card';
+
+        const idxEl = document.createElement('div');
+        idxEl.className = 'row-idx';
+        idxEl.textContent = (idx + 1) + '.';
+
+        const labelInput = document.createElement('input');
+        labelInput.type = 'text';
+        labelInput.value = r.label;
+        labelInput.maxLength = 120;
+        labelInput.placeholder = 'Nama komponen biaya';
+        labelInput.addEventListener('input', () => {
+          draftData[idx].label = labelInput.value;
+          updateTotalPreview();
+        });
+
+        const lakiInput = document.createElement('input');
+        lakiInput.type = 'text';
+        lakiInput.inputMode = 'numeric';
+        lakiInput.value = r.laki;
+        lakiInput.placeholder = 'Harga laki-laki';
+        lakiInput.addEventListener('input', () => {
+          const clean = lakiInput.value.replace(/[^\d]/g, '');
+          if (clean !== lakiInput.value) lakiInput.value = clean;
+          draftData[idx].laki = sanitizeAmount(clean);
+          updateTotalPreview();
+        });
+
+        const perempuanInput = document.createElement('input');
+        perempuanInput.type = 'text';
+        perempuanInput.inputMode = 'numeric';
+        perempuanInput.value = r.perempuan;
+        perempuanInput.placeholder = 'Harga perempuan';
+        perempuanInput.addEventListener('input', () => {
+          const clean = perempuanInput.value.replace(/[^\d]/g, '');
+          if (clean !== perempuanInput.value) perempuanInput.value = clean;
+          draftData[idx].perempuan = sanitizeAmount(clean);
+          updateTotalPreview();
+        });
+
+        const delBtn = document.createElement('button');
+        delBtn.type = 'button';
+        delBtn.className = 'admin-row-delete';
+        delBtn.textContent = '🗑';
+        delBtn.title = 'Hapus baris ini';
+        delBtn.addEventListener('click', () => {
+          if (draftData.length <= 1) {
+            showMsg(panelError, 'Minimal harus ada 1 komponen biaya.');
+            return;
+          }
+          if (confirm('Hapus komponen "' + (draftData[idx].label || '(tanpa nama)') + '"?')) {
+            draftData.splice(idx, 1);
+            renderAdminRows();
+          }
+        });
+
+        card.append(idxEl, labelInput, lakiInput, perempuanInput, delBtn);
+        rowsContainer.appendChild(card);
+      });
+      updateTotalPreview();
+    }
+
+    function updateTotalPreview() {
+      const totals = draftData.reduce((acc, r) => {
+        acc.laki += sanitizeAmount(r.laki);
+        acc.perempuan += sanitizeAmount(r.perempuan);
+        return acc;
+      }, { laki: 0, perempuan: 0 });
+      totalPreview.innerHTML = '';
+      const l1 = document.createElement('span');
+      l1.textContent = 'Total Laki-Laki: ' + formatRupiah(totals.laki);
+      const l2 = document.createElement('span');
+      l2.textContent = 'Total Perempuan: ' + formatRupiah(totals.perempuan);
+      totalPreview.append(l1, l2);
+    }
+
+    /* ---------- event: buka/tutup login ---------- */
+    openBtn.addEventListener('click', () => {
+      if (isSessionValid()) {
+        openAdminPanel();
+      } else {
+        openLogin();
+      }
+    });
+    loginClose.addEventListener('click', () => closeOverlay(loginOverlay));
+    loginCancel.addEventListener('click', () => closeOverlay(loginOverlay));
+    loginOverlay.addEventListener('click', (e) => { if (e.target === loginOverlay) closeOverlay(loginOverlay); });
+
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const lockedFor = checkLockout();
+      if (lockedFor > 0) {
+        showMsg(loginError, 'Akun terkunci sementara. Coba lagi dalam ' + lockedFor + ' detik.');
         return;
       }
+      const pw = passwordInput.value;
+      if (!pw) return;
+      loginSubmit.disabled = true;
+      loginSubmit.textContent = 'Memeriksa...';
       try {
-        const hash = await sha256Hex(p1);
-        localStorage.setItem(HASH_KEY, hash);
-        closeChangePasswordModal();
-        showToast('🔑 Kata sandi admin berhasil diganti.');
-      } catch (err) {
-        console.error(err);
-        el.cpError.textContent = 'Gagal mengganti kata sandi di browser ini.';
-        el.cpError.style.display = 'block';
-      }
-    }
-
-    // ── Event bindings ──
-    el.fab.addEventListener('click', () => { isAdmin ? exitAdminMode() : openLoginModal(); });
-    el.btnCancel.addEventListener('click', closeLoginModal);
-    el.overlay.addEventListener('click', (e) => { if (e.target === el.overlay) closeLoginModal(); });
-    el.btnLogin.addEventListener('click', attemptLogin);
-    el.password.addEventListener('keydown', (e) => { if (e.key === 'Enter') attemptLogin(); });
-
-    el.btnAddReq.addEventListener('click', addReqItem);
-    el.btnResetReq.addEventListener('click', () => {
-      if (confirm('Kembalikan data Persyaratan ke versi bawaan? Perubahan tersimpan akan hilang.')) {
-        reqData = structuredCloneSafe(DEFAULT_REQ_DATA);
-        localStorage.removeItem(REQ_STORAGE_KEY);
-        renderReq();
-        showToast('🔄 Persyaratan dikembalikan ke bawaan.');
-      }
-    });
-
-    el.btnAddFaq.addEventListener('click', addFaqItem);
-    el.btnResetFaq.addEventListener('click', () => {
-      if (confirm('Kembalikan data FAQ ke versi bawaan? Perubahan tersimpan akan hilang.')) {
-        faqData = structuredCloneSafe(DEFAULT_FAQ_DATA);
-        localStorage.removeItem(FAQ_STORAGE_KEY);
-        renderFaq();
-        showToast('🔄 FAQ dikembalikan ke bawaan.');
-      }
-    });
-
-    el.btnSave.addEventListener('click', () => {
-      if (saveAll()) showToast('💾 Semua perubahan tersimpan di perangkat ini.');
-    });
-    el.btnExit.addEventListener('click', () => { exitAdminMode(); showToast('🚪 Keluar dari mode admin.'); });
-
-    el.btnChangePassword.addEventListener('click', openChangePasswordModal);
-    el.btnCpCancel.addEventListener('click', closeChangePasswordModal);
-    el.cpOverlay.addEventListener('click', (e) => { if (e.target === el.cpOverlay) closeChangePasswordModal(); });
-    el.btnCpSave.addEventListener('click', saveNewPassword);
-    el.cpPass2.addEventListener('keydown', (e) => { if (e.key === 'Enter') saveNewPassword(); });
-
-    // Cegah Enter membuat baris baru aneh di kolom satu-baris (req-text/note/faq-question)
-    document.addEventListener('keydown', (e) => {
-      if (isAdmin && e.key === 'Enter' && e.target.classList && e.target.classList.contains('editable-field') && e.target.id !== 'specialReqText' && e.target.getAttribute('data-field') !== 'a') {
-        e.preventDefault();
-        e.target.blur();
-      }
-    });
-
-    // Render awal (mode publik/non-admin)
-    renderAll();
-
-    // Pulihkan sesi admin bila sebelumnya aktif di tab yang sama, DAN belum idle-timeout
-    try {
-      if (sessionStorage.getItem(SESSION_FLAG_KEY) === '1') {
-        const last = parseInt(sessionStorage.getItem(LAST_ACTIVITY_KEY) || '0', 10) || 0;
-        if (last && Date.now() - last <= IDLE_TIMEOUT_MS) {
-          enterAdminMode();
+        const hash = await sha256Hex(pw);
+        if (hash === getAdminHash()) {
+          resetAttempts();
+          startSession();
+          closeOverlay(loginOverlay);
+          openAdminPanel();
         } else {
-          sessionStorage.removeItem(SESSION_FLAG_KEY);
+          const a = registerFailedAttempt();
+          if (a.lockUntil > Date.now()) {
+            showMsg(loginError, 'Terlalu banyak percobaan gagal. Coba lagi dalam 60 detik.');
+          } else {
+            showMsg(loginError, 'Kata sandi salah. Percobaan tersisa: ' + (MAX_ATTEMPTS - a.count));
+          }
+          passwordInput.value = '';
+          passwordInput.focus();
         }
+      } finally {
+        loginSubmit.disabled = false;
+        loginSubmit.textContent = 'Masuk';
       }
-    } catch (e) {}
+    });
+
+    /* ---------- event: panel admin ---------- */
+    panelClose.addEventListener('click', () => closeOverlay(panelOverlay));
+    panelOverlay.addEventListener('click', (e) => { if (e.target === panelOverlay) closeOverlay(panelOverlay); });
+
+    addRowBtn.addEventListener('click', () => {
+      touchSession();
+      draftData.push({ id: nextId++, label: '', laki: 0, perempuan: 0 });
+      renderAdminRows();
+      const inputs = rowsContainer.querySelectorAll('.admin-row-card');
+      const last = inputs[inputs.length - 1];
+      if (last) last.querySelector('input').focus();
+    });
+
+    saveBtn.addEventListener('click', () => {
+      if (!isSessionValid()) {
+        showMsg(panelError, 'Sesi admin sudah berakhir. Silakan login kembali.');
+        closeOverlay(panelOverlay);
+        return;
+      }
+      hideMsg(panelError);
+      hideMsg(panelSuccess);
+
+      // Validasi logis: label tidak boleh kosong, harga harus angka >= 0
+      const cleaned = draftData.map(r => ({
+        id: r.id,
+        label: sanitizeLabel(r.label),
+        laki: sanitizeAmount(r.laki),
+        perempuan: sanitizeAmount(r.perempuan)
+      }));
+      const emptyLabelIdx = cleaned.findIndex(r => r.label === '');
+      if (emptyLabelIdx !== -1) {
+        showMsg(panelError, 'Baris ke-' + (emptyLabelIdx + 1) + ': nama komponen biaya tidak boleh kosong.');
+        return;
+      }
+      if (cleaned.length === 0) {
+        showMsg(panelError, 'Minimal harus ada 1 komponen biaya.');
+        return;
+      }
+
+      biayaData = cleaned;
+      nextId = biayaData.reduce((max, r) => Math.max(max, r.id), 0) + 1;
+      saveData();
+      renderPublicTable();
+      touchSession();
+      showMsg(panelSuccess, 'Perubahan tersimpan dan tampilan tabel sudah diperbarui.');
+    });
+
+    resetBtn.addEventListener('click', () => {
+      if (!confirm('Reset semua komponen biaya ke data bawaan (default)? Perubahan tersimpan akan hilang.')) return;
+      draftData = DEFAULT_DATA.map(r => ({ ...r }));
+      renderAdminRows();
+      hideMsg(panelSuccess);
+      showMsg(panelError, 'Data direset di form ini. Klik "Simpan Perubahan" untuk menerapkannya.');
+    });
+
+    logoutBtn.addEventListener('click', () => {
+      endSession();
+      closeOverlay(panelOverlay);
+    });
+
+    /* ---------- event: ganti kata sandi ---------- */
+    changePwBtn.addEventListener('click', () => {
+      hideMsg(pwError);
+      hideMsg(pwSuccess);
+      pwForm.reset();
+      openOverlay(pwOverlay);
+    });
+    pwClose.addEventListener('click', () => closeOverlay(pwOverlay));
+    pwCancel.addEventListener('click', () => closeOverlay(pwOverlay));
+    pwOverlay.addEventListener('click', (e) => { if (e.target === pwOverlay) closeOverlay(pwOverlay); });
+
+    pwForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      hideMsg(pwError);
+      hideMsg(pwSuccess);
+      const current = $('admin-pw-current').value;
+      const next = $('admin-pw-new').value;
+      const confirmPw = $('admin-pw-confirm').value;
+
+      const currentHash = await sha256Hex(current);
+      if (currentHash !== getAdminHash()) {
+        showMsg(pwError, 'Kata sandi saat ini salah.');
+        return;
+      }
+      if (next.length < 8) {
+        showMsg(pwError, 'Kata sandi baru minimal 8 karakter.');
+        return;
+      }
+      if (next !== confirmPw) {
+        showMsg(pwError, 'Konfirmasi kata sandi baru tidak cocok.');
+        return;
+      }
+      const newHash = await sha256Hex(next);
+      localStorage.setItem(ADMIN_HASH_KEY, newHash);
+      showMsg(pwSuccess, 'Kata sandi berhasil diubah. Gunakan kata sandi baru saat login berikutnya.');
+      pwForm.reset();
+    });
+
+    /* ---------- tutup modal dengan tombol Escape ---------- */
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      if (loginOverlay.classList.contains('open')) closeOverlay(loginOverlay);
+      else if (pwOverlay.classList.contains('open')) closeOverlay(pwOverlay);
+      else if (panelOverlay.classList.contains('open')) closeOverlay(panelOverlay);
+    });
+
+    // Perbarui aktivitas sesi saat admin berinteraksi di dalam panel
+    ['click', 'input'].forEach(evt => {
+      panelOverlay.addEventListener(evt, touchSession);
+      pwOverlay.addEventListener(evt, touchSession);
+    });
+
+    /* ---------- inisialisasi ---------- */
+    loadData();
+    renderPublicTable();
   })();
 </script>
 
